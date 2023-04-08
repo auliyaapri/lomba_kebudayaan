@@ -14,39 +14,45 @@
 
 <body>
     <div class="container mt-5">
+        <h1 class="text-center">Masukan Konten</h1>
         <form action="<?= base_url() . 'user/menambahkan/tambah_aksi'; ?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="exampleInputEmail1">Judul</label>
                 <input type="text" name="judul_konten" class="form-control">
             </div>
             <div class="form-group">
-            <label for="exampleInputEmail1">Pilih Daerah</label>
+                <label for="exampleInputEmail1">Pilih Daerah</label>
                 <select class="custom-select mb-3 form-control" name="daerah">
                     <option selected>Pilih daerah</option>
                     <option value="jakarta">DKI Jakarta</option>
-                    <option value="jawa tengah">Jawa tengah</option>
+                    <option value="jawa tengah">Jawa barat</option>
                     <option value="3">Three</option>
                 </select>
             </div>
 
             <div class="form-group">
-            <label for="exampleInputEmail1">Pilih Kategori</label>
+                <label for="exampleInputEmail1">Pilih Kategori</label>
                 <select class="custom-select mb-3 form-control" name="kategori">
                     <option selected>Pilih daerah</option>
-                    <option value="makanan">Makanan</option>
-                    <option value="alat musik">Alat Musik</option>
-                    <option value="tarian">Tarain</option>
+                    <option value="Makanan">Makanan</option>
+                    <option value="Alat musik">Alat Musik</option>
+                    <option value="Tarian">Tarian</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Isi Konten</label>
-                <input type="text" name="isi_konten" class="form-control">
+            <label for="exampleInputEmail1">Isi Konten</label>
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Comments</label>
             </div>
-     
+            <div class="form-group">
+                <label for="exampleInputEmail1">Slider Home</label>
+                <input type="text" name="kategori2" class="form-control">
+            </div>
+
 
             <div class="form-group">
-            <label for="exampleInputEmail1">Pilih Gambar</label>
-            <input type="file" name="gambar" class="form-control">
+                <label for="exampleInputEmail1">Pilih Gambar</label>
+                <input type="file" name="gambar" class="form-control">
 
             </div>
 

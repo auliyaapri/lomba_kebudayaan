@@ -8,14 +8,14 @@ class Menambahkan extends CI_Controller
         $daerah             = $this->input->post('daerah');
         $kategori           = $this->input->post('kategori');
         $isi_konten         = $this->input->post('isi_konten');
+        $kategori2         = $this->input->post('kategori2');
         $gambar             = $_FILES['gambar']['name'];
         if ($gambar = '') {
-        } else {
-            $dki_jakarta = "jakarta";
+        } else {            
             $jawa_barat = "jawa barat";
             $jawa_tengah = "jawa tengah";
-            if ($daerah == $dki_jakarta) {
-                $config['upload_path']     = './upload_image/jakarta/makanan/';
+            if ($daerah == $daerah && $kategori == $kategori) {
+                $config['upload_path']     = './upload_image/jakarta/'.$kategori.'/';
             } elseif ($daerah == $jawa_barat) {
                 $config['upload_path']     = './upload_image/jawa barat/';
             } elseif ($daerah == $jawa_tengah) {
@@ -39,6 +39,7 @@ class Menambahkan extends CI_Controller
             'daerah'            => $daerah,
             'kategori'          => $kategori,
             'isi_konten'        => $isi_konten,
+            'kategori2'        => $kategori2,
             'gambar'            => $gambar
         );
         $this->model_menambahkan_konten->tambah_barang($data, 'upload_content');

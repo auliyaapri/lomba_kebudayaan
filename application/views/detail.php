@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <div class="card">
         <h5 class="card-header">Detail Produk</h5>
-        <div class="card-body">
+        <div class="card-bodyS">
             <?php foreach ($barang as $brg) : ?>
                 <div class="row">
                     <div class="col-md-5">
@@ -13,26 +13,10 @@
                         
                         <!-- ========== PENGKONDISIAN ==========-->
                         <!-- <img src="<?= base_url().$folder.$nama_kategori.$brg->gambar.'/'?>" alt="" class="card-img-top w-75"> -->
-                        <img src="<?= base_url() . '/upload_image/' . $daerah . '/' . strtolower($kategori_folder) . '/' . $brg->gambar?>" class="card-img-top w-75">
+                        <!-- <img src="<?= base_url() . '/upload_image/' . $daerah . '/' . strtolower($kategori_folder) . '/' . $brg->gambar?>" class="card-img-top w-75"> -->
 
                     </div>
-                    <div class="col-md-7">
-                        <table class="table">
-                            <tr>
-                                <td class="w-25">Nama Produk</td>
-                                <td><strong><?php echo $brg->judul_konten;  ?></strong> </td>
-                                <td><strong><?php echo $brg->kategori;  ?></strong> </td>
-                                <td><strong><?php echo $brg->isi_konten;  ?></strong> </td>
-                                <!-- <td><strong><?php echo $brg->$kategori;  ?></strong> </td> -->
-                            </tr>
-                     
-                          
-                        </table>
-
-                        <?php echo anchor('dashboard/tambah_ke_keranjang/' . $brg->id_konten, '<div class="btn btn-sm btn-primary "><i class="fa fa-shopping-cart pt-2 pb-2 pr-2"></i>Tambah ke keranjang</div>'); ?>
-                        <?php echo anchor('welcome', '<div class="btn btn-sm btn-danger"><i class="fa fa-chevron-circle-left pt-2 pb-2 pr-2" aria-hidden="true"></i>Kembali</div>'); ?>
-
-                    </div>
+                 
                 </div>
        
         </div>
@@ -64,7 +48,7 @@
     <link rel="stylesheet" href="<?=base_url()?>assets_blog/css/fontawesome.css">
     <link rel="stylesheet" href="<?=base_url()?>assets_blog/css/templatemo-stand-blog.css">
     <link rel="stylesheet" href="<?=base_url()?>assets_blog/css/owl.css">
-<!--
+<!--s
 
 TemplateMo 551 Stand Blog
 
@@ -117,7 +101,8 @@ https://templatemo.com/tm-551-stand-blog
             <div class="col-lg-12">
               <div class="text-content">
                 <h4><?php echo $brg->kategori;  ?></h4>
-                <h2></h2>
+                <h2><?php echo $brg->judul_konten;  ?></h2>
+                
               </div>
             </div>
           </div>
