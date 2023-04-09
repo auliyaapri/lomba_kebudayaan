@@ -8,10 +8,6 @@ class Model_home extends CI_Model
     {
         // return $this->db->get('upload_content');
         $result = $this->db->get('upload_content',4,0);        
-        
-
-        
-        
         return $result;
     }
     public function data_featured_news()
@@ -21,6 +17,16 @@ class Model_home extends CI_Model
         // return $this->db->get('tb_barang', $limit, $start);
         return $result;
     }
+    public function data_berita_terbaru()
+    {
+        // return $this->db->get('upload_content');
+        $this->db->order_by("tgl_konten", "asc");
+        $result = $this->db->get('upload_content',4,0);
+        
+        // return $this->db->get('tb_barang', $limit, $start);
+        return $result;
+    }
+
     public function detail_konten($id_konten)
     {
         $query = $this->db->where('id_konten',$id_konten)->get('upload_content');
@@ -38,8 +44,6 @@ class Model_home extends CI_Model
         $this->db->or_like('kategori', $keyword);
         $this->db->or_like('isi_konten', $keyword);
         return $this->db->get()->result();
-
-
 
     }
 

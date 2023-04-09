@@ -1,7 +1,7 @@
     <!-- Footer Start -->
     <div class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
         <div class="row py-4">
-            <div class="col-lg-3 col-md-6 mb-5">
+            <div class="col-lg-4 col-md-6 mb-5">
                 <h5 class="mb-4 text-white text-uppercase font-weight-bold">Get In Touch</h5>
                 <p class="font-weight-medium"><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
                 <p class="font-weight-medium"><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
@@ -15,7 +15,7 @@
                     <a class="btn btn-lg btn-secondary btn-lg-square" href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
+            <div class="col-lg-4 col-md-6 mb-5">
                 <h5 class="mb-4 text-white text-uppercase font-weight-bold">Popular News</h5>
                 <div class="mb-3">
                     <div class="mb-2">
@@ -39,55 +39,15 @@
                     <a class="small text-body text-uppercase font-weight-medium" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
+            <div class="col-lg-4 col-md-6 mb-5">
                 <h5 class="mb-4 text-white text-uppercase font-weight-bold">Categories</h5>
                 <div class="m-n1">
-                    <a href="" class="btn btn-sm btn-secondary m-1">Politics</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Corporate</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Health</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Education</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Science</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Foods</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Entertainment</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Travel</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Lifestyle</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Politics</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Corporate</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Health</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Education</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Science</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Foods</a>
+                <a href="<?=base_url('kategori/makanan')?>" class="btn btn-sm btn-secondary m-1">Makanan</a>
+                    <a href="<?=base_url('kategori/tarian')?>" class="btn btn-sm btn-secondary m-1">Tarian</a>
+                    <a href="<?=base_url('kategori/alat_musik')?>" class="btn btn-sm btn-secondary m-1">Alat Musik</a>
+                   
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="mb-4 text-white text-uppercase font-weight-bold">Flickr Photos</h5>
-                <div class="row">
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="img/news-110x110-1.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="img/news-110x110-2.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="img/news-110x110-3.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="img/news-110x110-4.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="img/news-110x110-5.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="img/news-110x110-1.jpg" alt=""></a>
-                    </div>
-                </div>
-            </div>
+            </div>    
         </div>
     </div>
     <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">

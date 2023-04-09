@@ -21,7 +21,7 @@
                 $daerah          = $ftr->daerah;
                 $kategori_folder = $ftr->kategori;
             ?>
-                     <div class="col ml-2">
+                     <div class="col ml-3">
                      <img src="<?= base_url() . '/upload_image/' . $daerah . '/' . strtolower($kategori_folder) . '/' . $ftr->gambar ?>" class="img-fluid w-100 h-100" style="object-fit: cover;">
                      <div class="overlay">
                          <div class="mb-2">

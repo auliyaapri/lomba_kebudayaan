@@ -52,7 +52,7 @@
     </div>
   </div>
   <div class = "card">
-  <img src="<?= base_url() . '/assets/img/kategori_menari1.png' ?>"alt="...">
+  <img src="<?= base_url() . '/assets/img/kategori_menari2.png' ?>"alt="...">
     <div class="card-content">
       <h2>
         Tarian

@@ -71,16 +71,62 @@
                     <a href="single.html" class="nav-item nav-link">MASUK</a>
                     <a href="single.html" class="nav-item nav-link">DAFTAR</a>              
                 </div>
-                <?php echo form_open('home/search'); ?>
-                              
+
+
+
+                <?php if ($this->uri->segment(1) == 'home') {?>
+                <?php echo form_open('home'); ?>
+                
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control border-0" placeholder="Keyword" name="keyword" autocomplete="off">
+                    <div class="input-group-append">
+                        <button class="input-group-text bg-primary text-dark border-0 px-3" type="submit" name="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                
+                <?php echo form_close(); ?>
+                <?php } ; ?>
+
+
+
+
+
+                <?php if ($this->uri->segment(2) == 'alat_musik') {?>
+                <?php echo form_open('kategori/alat_musik'); ?>
                 <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
                     <input type="text" class="form-control border-0" placeholder="Keyword" name="keyword">
                     <div class="input-group-append">
-                        <button class="input-group-text bg-primary text-dark border-0 px-3"><i class="fa fa-search"></i></button>
+                    <button class="input-group-text bg-primary text-dark border-0 px-3" type="submit" name="submit"><i class="fa fa-search"></i></button>
                     </div>
                     
                 </div>
                 <?php echo form_close(); ?>
+                <?php } ; ?> 
+
+                <?php if ($this->uri->segment(2) == 'makanan') {?>
+                <?php echo form_open('kategori/makanan'); ?>
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control border-0" placeholder="Keyword" name="keyword">
+                    <div class="input-group-append">
+                    <button class="input-group-text bg-primary text-dark border-0 px-3" type="submit" name="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                    
+                </div>
+                <?php echo form_close(); ?>
+                <?php } ; ?> 
+
+                <?php if ($this->uri->segment(2) == 'tarian') {?>
+                <?php echo form_open('kategori/tarian'); ?>
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control border-0" placeholder="Keyword" name="keyword">
+                    <div class="input-group-append">
+                    <button class="input-group-text bg-primary text-dark border-0 px-3" type="submit" name="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                    
+                </div>
+                <?php echo form_close(); ?>
+                <?php } ; ?> 
+
 
                 
             </div>

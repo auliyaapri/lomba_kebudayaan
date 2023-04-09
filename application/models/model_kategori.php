@@ -48,6 +48,31 @@ class Model_kategori extends CI_Model
         $this->db->where('kategori','alat musik');
         return $this->db->get();        
     }
+    public function get_keyword_alat_musik($keyword) {
+        $this->db->select('*');
+        $this->db->from('upload_content');
+        $this->db->where('kategori','alat musik');
+        $this->db->like('judul_konten', $keyword);
+        $this->db->or_like('daerah', $keyword);        
+        return $this->db->get()->result();
+    }
+    public function get_keyword_makanan($keyword) {
+        $this->db->select('*');
+        $this->db->from('upload_content');
+        $this->db->where('kategori','makanan');
+        $this->db->like('judul_konten', $keyword);
+        $this->db->or_like('daerah', $keyword);
+
+        return $this->db->get()->result();
+    }
+    public function get_keyword_tarian($keyword) {
+        $this->db->select('*');
+        $this->db->from('upload_content');
+        $this->db->where('kategori','tarian');
+        $this->db->like('judul_konten', $keyword);
+        $this->db->or_like('daerah', $keyword);
+        return $this->db->get()->result();
+    }
 
 }
 

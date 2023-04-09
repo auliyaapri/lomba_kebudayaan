@@ -11,26 +11,68 @@ class Kategori extends CI_Controller {
 		$this->load->view('templates/footer_content');
 	}
 	public function makanan() {
-		$data['makanan'] = $this->model_kategori->data_makanan()->result();		
+		$keyword = $this->input->post('keyword');		
 		$this->load->view('templates/header');
 		$this->load->view('templates/navbar');
-		$this->load->view('kategori/index', $data);
-		$this->load->view('templates/footer_content');
-	}
-	public function alat_musik() {
-		$data['makanan'] = $this->model_kategori->data_alat_musik()->result();		
-		$this->load->view('templates/header');
-		$this->load->view('templates/navbar');
-		$this->load->view('kategori/index', $data);
-		$this->load->view('templates/footer_content');
-	}
-	public function tarian() {
-		$data['makanan'] = $this->model_kategori->data_tarian()->result();		
-		$this->load->view('templates/header');
-		$this->load->view('templates/navbar');
-		$this->load->view('kategori/index', $data);
+		if ($keyword) {
+			$datass['makanan'] = $this->model_kategori->get_keyword_makanan($keyword);
+			$this->load->view('kategori/index', $datass);
+		} 
+		if ($keyword == null) {
+			$data['makanan'] = $this->model_kategori->data_makanan()->result();		
+			$this->load->view('kategori/index', $data);
+		}
+		
 		$this->load->view('templates/footer_content');
 	}
 
+
+
+
+	public function alat_musik() {
+		$keyword = $this->input->post('keyword');
+		// $data['makanan'] = $this->model_kategori->data_alat_musik()->result();		
+		$this->load->view('templates/header');
+		$this->load->view('templates/navbar');
+		if ($keyword) {
+			$datass['makanan'] = $this->model_kategori->get_keyword_alat_musik($keyword);
+			$this->load->view('kategori/index', $datass);
+		} 
+		if ($keyword == null) {
+			$data['makanan'] = $this->model_kategori->data_alat_musik()->result();		
+			$this->load->view('kategori/index', $data);
+		}
+		$this->load->view('templates/footer_content');
+	}
+
+
+
+
+
+	public function tarian() {
+		$keyword = $this->input->post('keyword');
+		$this->load->view('templates/header');
+		$this->load->view('templates/navbar');
+		if ($keyword) {
+			$datass['makanan'] = $this->model_kategori->get_keyword_tarian($keyword);
+			$this->load->view('kategori/index', $datass);
+		} 
+		if ($keyword == null) {
+			$data['makanan'] = $this->model_kategori->data_tarian()->result();		
+			$this->load->view('kategori/index', $data);
+		}
+	
+
+		$this->load->view('templates/footer_content');
+	}
+	public function search() {
+		$keyword = $this->input->post('keyword');
+		$data['makanan'] = $this->model_home->get_keyword($keyword);
+		$this->load->view('templates/header');
+		$this->load->view('templates/navbar');
+		$this->load->view('kategori/index', $data);
+		$this->load->view('templates/footer_content');
+
+	}
 	
 }
