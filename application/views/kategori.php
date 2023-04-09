@@ -22,10 +22,11 @@
         Alat Musik
       </h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.
+      Alat musik tradisional adalah salah satu budaya bangsa Indonesia. Dari Sabang sampai Merauke, beragam alat musik dimainkan di tiap daerah. Alat musik tradisional sendiri adalah alat musik yang berakar pada tradisi masyarakat tertentu.
+
       </p>
-      <a href="#" class="button">
-        Find out more 
+      <a href="<?=base_url('kategori/alat_musik')?>" class="button">
+        Lihat selengkapnya
         <span class="material-symbols-outlined">
           arrow_right_alt
         </span>
@@ -40,10 +41,10 @@
         Makanan
       </h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.
+      Makanan Tradisional merupakan makanan asli khas daerah tertentu di Indonesia dimana dalam proses pengolahannya sangat dikuasai oleh masyarakat di daerah tersebut, serta cita rasanya sangat sesuai dengan masyarakat setempat.
       </p>
-      <a href="#" class="button">
-        Find out more 
+      <a href="<?=base_url('kategori/makanan')?>" class="button">
+        Lihat selengkapnya
         <span class="material-symbols-outlined">
           arrow_right_alt
         </span>
@@ -51,16 +52,18 @@
     </div>
   </div>
   <div class = "card">
-    <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt="">
+  <img src="<?= base_url() . '/assets/img/kategori_menari1.png' ?>"alt="...">
     <div class="card-content">
       <h2>
         Tarian
       </h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.
+      Tari tradisional adalah tarian yang telah berkembang dari masa ke masa di suatu daerah, adat, atau etnik tertentu. Perkembangan tersebut membuat tari tradisional memiliki nilai-nilai estetika klasik yang dilestarikan dari generasi ke generasi.
+
+
       </p>
-      <a href="#" class="button">
-        Find out more 
+      <a href="<?=base_url('kategori/tarian')?>" class="button">
+        Lihat selengkapnya
         <span class="material-symbols-outlined">
           arrow_right_alt
         </span>

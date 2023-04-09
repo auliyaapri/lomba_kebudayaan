@@ -12,14 +12,10 @@ class Menambahkan extends CI_Controller
         $gambar             = $_FILES['gambar']['name'];
         if ($gambar = '') {
         } else {            
-            $jawa_barat = "jawa barat";
-            $jawa_tengah = "jawa tengah";
+            // $jawa_barat = "jawa barat";
+            // $jawa_tengah = "jawa tengah";
             if ($daerah == $daerah && $kategori == $kategori) {
-                $config['upload_path']     = './upload_image/jakarta/'.$kategori.'/';
-            } elseif ($daerah == $jawa_barat) {
-                $config['upload_path']     = './upload_image/jawa barat/';
-            } elseif ($daerah == $jawa_tengah) {
-                $config['upload_path']     = './upload_image/jawa tengah/makanan/';
+                $config['upload_path']     = './upload_image/'.$daerah. '/' .$kategori.'/';
             }
 
             // ========= DAAH BENER ===========
@@ -39,7 +35,7 @@ class Menambahkan extends CI_Controller
             'daerah'            => $daerah,
             'kategori'          => $kategori,
             'isi_konten'        => $isi_konten,
-            'kategori2'        => $kategori2,
+            'kategori2'         => $kategori2,
             'gambar'            => $gambar
         );
         $this->model_menambahkan_konten->tambah_barang($data, 'upload_content');

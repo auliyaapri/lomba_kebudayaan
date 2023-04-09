@@ -8,10 +8,6 @@ class Model_kategori extends CI_Model
     {
         // return $this->db->get('upload_content');
         $result = $this->db->get('upload_content',4,0);        
-        
-
-        
-        
         return $result;
     }
     public function data_featured_news()
@@ -29,6 +25,28 @@ class Model_kategori extends CI_Model
         } else {
             return false;
         }
+    }
+    public function data_makanan()
+    {
+        $this->db->select('*');
+        $this->db->from('upload_content');
+        $this->db->where('kategori','makanan');
+        
+        return $this->db->get();        
+    }
+    public function data_tarian()
+    {
+        $this->db->select('*');
+        $this->db->from('upload_content');
+        $this->db->where('kategori','tarian');
+        return $this->db->get();        
+    }
+    public function data_alat_musik()
+    {
+        $this->db->select('*');
+        $this->db->from('upload_content');
+        $this->db->where('kategori','alat musik');
+        return $this->db->get();        
     }
 
 }

@@ -5,11 +5,8 @@
                 <nav class="navbar navbar-expand-sm bg-dark p-0">
                     <ul class="navbar-nav ml-n2">
                         <li class="nav-item border-right border-secondary">
-                            <a class="nav-link text-body small" href="#">Monday, January 1, 2045</a>
-                        </li>
-                        <li class="nav-item border-right border-secondary">
-                            <a class="nav-link text-body small" href="#">Advertise</a>
-                        </li>
+                            <a class="nav-link text-body small" href="#"><?php echo date("l") . ', '.date('F j'). ', '.date('Y');?></a>
+                        </li>                        
                         <li class="nav-item border-right border-secondary">
                             <a class="nav-link text-body small" href="#">Contact</a>
                         </li>
@@ -68,19 +65,24 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
-                <div class="navbar-nav mr-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Beranda</a>
-                    <a href="<?=base_url('kategori')?>" class="nav-item nav-link">KATEGORI</a>
+                <div class="navbar-nav mr-auto py-0">                    
+                    <a aria-current="page" href="<?= base_url('home') ?>" <?= $this->uri->segment(1) == 'home' || $this->uri->segment(1) == '' ? 'class="active nav-link"' : 'class="nav-link"' ?>>Beranda</a>                    
+                    <a aria-current="page" href="<?= base_url('kategori') ?>" <?= $this->uri->segment(1) == 'kategori' || $this->uri->segment(1) == 'kategori' ? 'class="active nav-link"' : 'class="nav-link"' ?>>Kategori</a>                    
                     <a href="single.html" class="nav-item nav-link">MASUK</a>
                     <a href="single.html" class="nav-item nav-link">DAFTAR</a>              
                 </div>
+                <?php echo form_open('home/search'); ?>
+                              
                 <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
-                    <input type="text" class="form-control border-0" placeholder="Keyword">
+                    <input type="text" class="form-control border-0" placeholder="Keyword" name="keyword">
                     <div class="input-group-append">
-                        <button class="input-group-text bg-primary text-dark border-0 px-3"><i
-                                class="fa fa-search"></i></button>
+                        <button class="input-group-text bg-primary text-dark border-0 px-3"><i class="fa fa-search"></i></button>
                     </div>
+                    
                 </div>
+                <?php echo form_close(); ?>
+
+                
             </div>
         </nav>
     </div>

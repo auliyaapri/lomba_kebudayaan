@@ -15,21 +15,20 @@
                              <div class="overlay">  
                                  <div class="mb-2">
                                      <h5 class="d-flex">
-                                         <?php if ($hm->kategori == "Tarian") { ?>
+                                         <?php if ($hm->kategori == "tarian") { ?>
                                              <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2 d-flex align-items-center" href=""><?= $hm->kategori ?> <img src="<?= base_url() ?>assets/img/dance_icon.png" style="height: 23px;" class="ml-2" alt=""></a>
                                          <?php }; ?>
-                                         <?php if ($hm->kategori == "Makanan") { ?>
+                                         <?php if ($hm->kategori == "makanan") { ?>
                                              <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2 d-flex align-items-center" href=""><?= $hm->kategori ?> <img src="<?= base_url() ?>assets/img/food-icon.png" style="height: 23px;" class="ml-2" alt=""></a>
                                          <?php }; ?>
-                                         <?php if ($hm->kategori == "Alat musik") { ?>
+                                         <?php if ($hm->kategori == "alat musik") { ?>
                                              <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2 d-flex align-items-center" href=""><?= $hm->kategori ?> <img src="<?= base_url() ?>assets/img/alat_musik.png" style="height: 23px;" class="ml-2" alt=""></a>
                                          <?php }; ?>
                                          <?php $originalDate = $hm->tgl_konten; $newDate = date("d-m-Y", strtotime($originalDate));?><a class="text-white" href=""><small><?= $newDate ?></small></a>
                                      </h5>
                                  </div>
                                  <!-- <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="<?= base_url(strtolower($kategori_folder) . '/' . $daerah . '') ?>"><?= $hm->judul_konten ?></a> -->
-                                 <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="<?= base_url('detail/detail_konten/' . $hm->id_konten); ?>"><?= $hm->judul_konten ?></a>
-                                 <!-- <?php echo anchor('detail/detail_konten/' . $hm->id_konten, '<div class="btn btn-danger">Detail</div>'); ?> -->
+                                 <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="<?= base_url('detail/detail_konten/' . $hm->id_konten); ?>"><?= $hm->judul_konten ?></a>                                 
                              </div>
                          </div>
                      <?php endif; ?>
@@ -51,13 +50,13 @@
                              <img src="<?= base_url() . '/upload_image/' . $daerah . '/' . strtolower($kategori_folder) . '/' . $hm->gambar ?>" class="img-fluid w-100 h-100" style="object-fit: cover;">
                              <div class="overlay">
                                  <div class="mb-2">
-                                     <?php if ($hm->kategori == "Tarian") { ?>
+                                     <?php if ($hm->kategori == "tarian") { ?>
                                          <a class="badge badge-primary text-uppercase font-weight-semi-bold pt-1 pb-1 mr-2" href="<?= base_url('detail/detail_konten/' . $hm->id_konten); ?>"><?= $hm->kategori ?><img src="<?= base_url() ?>assets/img/dance_icon.png" style="height: 23px;" class="ml-2" alt=""></a>
                                      <?php }; ?>
-                                     <?php if ($hm->kategori == "Makanan") { ?>
+                                     <?php if ($hm->kategori == "makanan") { ?>
                                          <a class="badge badge-primary text-uppercase font-weight-semi-bold pt-1 pb-1 mr-2" href="<?= base_url('detail/detail_konten/' . $hm->id_konten); ?>"><?= $hm->kategori ?><img src="<?= base_url() ?>assets/img/food-icon.png" style="height: 23px;" class="ml-2" alt=""></a>
                                      <?php }; ?>
-                                     <?php if ($hm->kategori == "Alat musik") { ?>
+                                     <?php if ($hm->kategori == "alat musik") { ?>
                                          <a class="badge badge-primary text-uppercase font-weight-semi-bold pt-1 pb-1 mr-2" href="<?= base_url('detail/detail_konten/' . $hm->id_konten); ?>"><?= $hm->kategori ?><img src="<?= base_url() ?>assets/img/alat_musik.png" style="height: 23px;" class="ml-2" alt=""></a>
                                      <?php }; ?>
                                      <!-- <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="<?= base_url('detail/detail_konten/' . $hm->id_konten); ?>"><?= $hm->kategori ?></a> -->

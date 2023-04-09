@@ -30,6 +30,18 @@ class Model_home extends CI_Model
             return false;
         }
     }
+    public function get_keyword($keyword) {
+        $this->db->select('*');
+        $this->db->from('upload_content');
+        $this->db->like('judul_konten', $keyword);
+        $this->db->or_like('daerah', $keyword);
+        $this->db->or_like('kategori', $keyword);
+        $this->db->or_like('isi_konten', $keyword);
+        return $this->db->get()->result();
+
+
+
+    }
 
 }
 

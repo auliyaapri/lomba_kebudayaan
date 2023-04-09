@@ -1,16 +1,25 @@
-<div class="content">
-  <ul>
-
-    <li><a href="post-details.html">
-        
-     
-          
-          
-          
-          <a class="h2 m-0 text-warning text-uppercase font-weight-bold" href="<?= base_url('detail/detail_konten/2'); ?>">kj</a>
-     
-        <span>May 31, 2020</span>
-      </a></li>
-
-  </ul>
-</div>
+    <div class="sidebar-item recent-posts">
+      <div class="sidebar-heading">
+        <h2>Recent Posts</h2>
+      </div>
+      <div class="content">
+        <ul>
+          <li><a href="post-details.html">
+            <?php foreach($home as $hm) : ?>
+    
+            
+              <h5><?=$hm->judul_konten;?></h5>
+              <?php endforeach; ?>
+              <span>May 31, 2020</span>
+            </a></li>
+          <li><a href="post-details.html">
+              <h5>Suspendisse et metus nec libero ultrices varius eget in risus</h5>
+              <span>May 28, 2020</span>
+            </a></li>
+          <li><a href="post-details.html">
+              <h5>Swag hella echo park leggings, shaman cornhole ethical coloring</h5>
+              <span>May 14, 2020</span>
+            </a></li>
+        </ul>
+      </div>
+    </div>

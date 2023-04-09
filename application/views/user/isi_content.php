@@ -25,7 +25,7 @@
                 <select class="custom-select mb-3 form-control" name="daerah">
                     <option selected>Pilih daerah</option>
                     <option value="jakarta">DKI Jakarta</option>
-                    <option value="jawa tengah">Jawa barat</option>
+                    <option value="jawa barat">Jawa barat</option>
                     <option value="3">Three</option>
                 </select>
             </div>
@@ -33,16 +33,15 @@
             <div class="form-group">
                 <label for="exampleInputEmail1">Pilih Kategori</label>
                 <select class="custom-select mb-3 form-control" name="kategori">
-                    <option selected>Pilih daerah</option>
-                    <option value="Makanan">Makanan</option>
-                    <option value="Alat musik">Alat Musik</option>
-                    <option value="Tarian">Tarian</option>
+                    <option selected>Pilih  Kategori</option>
+                    <option value="makanan">Makanan</option>
+                    <option value="alat musik">Alat Musik</option>
+                    <option value="tarian">Tarian</option>
                 </select>
             </div>
             <div class="form-group">
             <label for="exampleInputEmail1">Isi Konten</label>
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Comments</label>
+                <textarea class="form-control" name="isi_konten" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>                
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Slider Home</label>
