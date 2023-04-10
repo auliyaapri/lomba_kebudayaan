@@ -15,13 +15,17 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 <main>
-  <div class = "card">
+
+
+
+  <div class = "card" >
+  
   <img src="<?= base_url() . '/assets/img/kategori_alat_musik.png' ?>"alt="...">
     <div class="card-content">
       <h2>
-        Alat Musik
+        Alat MusikS
       </h2>
-      <p>
+      <p>         
       Alat musik tradisional adalah salah satu budaya bangsa Indonesia. Dari Sabang sampai Merauke, beragam alat musik dimainkan di tiap daerah. Alat musik tradisional sendiri adalah alat musik yang berakar pada tradisi masyarakat tertentu.
 
       </p>
@@ -33,6 +37,7 @@
       </a>
     </div>
   </div>
+  
   <div class = "card">
     
     <img src="<?= base_url() . '/assets/img/kategori_makanan.png' ?>"alt="...">

@@ -6,12 +6,7 @@
              <h4 class="m-0 text-uppercase font-weight-bold">Kategori <?=$ftr->kategori;?></h4>
              <?php break; ?>
              <?php endforeach; ?>
-
          </div>
-
-
-      
-
          <div class="ss">
                  <div class="row gx-1">
                  <?php foreach ($makanan as $ftr) : ?>

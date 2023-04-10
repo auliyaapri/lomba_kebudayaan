@@ -11,7 +11,7 @@
                             <a class="nav-link text-body small" href="#">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-body small" href="#">Login</a>
+                            <a class="nav-link text-body small" href="<?=base_url('auth/login')?>">Login</a>
                         </li>
                     </ul>
                 </nav>
@@ -68,7 +68,7 @@
                 <div class="navbar-nav mr-auto py-0">                    
                     <a aria-current="page" href="<?= base_url('home') ?>" <?= $this->uri->segment(1) == 'home' || $this->uri->segment(1) == '' ? 'class="active nav-link"' : 'class="nav-link"' ?>>Beranda</a>                    
                     <a aria-current="page" href="<?= base_url('kategori') ?>" <?= $this->uri->segment(1) == 'kategori' || $this->uri->segment(1) == 'kategori' ? 'class="active nav-link"' : 'class="nav-link"' ?>>Kategori</a>                    
-                    <a href="single.html" class="nav-item nav-link">MASUK</a>
+                    <a href="<?=base_url('auth/login')?>" class="nav-item nav-link">MASUK</a>
                     <a href="single.html" class="nav-item nav-link">DAFTAR</a>              
                 </div>
 
@@ -122,7 +122,6 @@
                     <div class="input-group-append">
                     <button class="input-group-text bg-primary text-dark border-0 px-3" type="submit" name="submit"><i class="fa fa-search"></i></button>
                     </div>
-                    
                 </div>
                 <?php echo form_close(); ?>
                 <?php } ; ?> 

@@ -29,7 +29,7 @@ class Home extends CI_Controller
 		$this->load->view('templates/breaking_news');
 		$this->load->view('templates/featured_news', $datas);
 		$this->load->view('templates/news_sidebar',$berita_terbaru);
-		$this->load->view('templates/footer_content');
+		$this->load->view('templates/footer_content',$berita_terbaru);
 		$this->load->view('templates/footer');
 	}
 

@@ -16,28 +16,26 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
-                <h5 class="mb-4 text-white text-uppercase font-weight-bold">Popular News</h5>
+                <h5 class="mb-4 text-white text-uppercase font-weight-bold">Berita Popular</h5>
+                <?php foreach ($berita_terbaru as $brt) :?>
                 <div class="mb-3">
                     <div class="mb-2">
-                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                        <a class="text-body" href=""><small>Jan 01, 2045</small></a>
+                    <?php if ($brt->kategori == "tarian") { ?>
+                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="<?=base_url('kategori/tarian')?>"><?= $brt->kategori ?> <img src="<?= base_url() ?>assets/img/dance_icon.png" style="height: 23px;" class="ml-2" alt=""></a>
+                        <?php }; ?>
+                    <?php if ($brt->kategori == "makanan") { ?>
+                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="<?=base_url('kategori/makanan')?>"><?= $brt->kategori ?> <img src="<?= base_url() ?>assets/img/food-icon.png" style="height: 23px;" class="ml-2" alt=""></a>
+                        <?php }; ?>
+                    <?php if ($brt->kategori == "alat musik") { ?>
+                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="<?=base_url('kategori/alat_musik')?>"><?= $brt->kategori ?> <img src="<?= base_url() ?>assets/img/alat_musik.png" style="height: 23px;" class="ml-2" alt=""></a>
+                        <?php }; ?>
+                        <?php $originalDate = $brt->tgl_konten; $newDate = date("F-d-Y", strtotime($originalDate));?><a class="text-body" href=""><small><?= $newDate ?></small></a>
                     </div>
-                    <a class="small text-body text-uppercase font-weight-medium" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
+                    <a class="small text-body text-uppercase font-weight-medium" href=""><?=$brt->judul_konten;?></a>
                 </div>
-                <div class="mb-3">
-                    <div class="mb-2">
-                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                        <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                    </div>
-                    <a class="small text-body text-uppercase font-weight-medium" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
-                </div>
-                <div class="">
-                    <div class="mb-2">
-                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                        <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                    </div>
-                    <a class="small text-body text-uppercase font-weight-medium" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
-                </div>
+                <?php endforeach ; ?>
+         
+
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
                 <h5 class="mb-4 text-white text-uppercase font-weight-bold">Categories</h5>
