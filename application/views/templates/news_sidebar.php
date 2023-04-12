@@ -36,7 +36,7 @@
                                                <?php $originalDate = $brt->tgl_konten; $newDate = date("F-d-Y", strtotime($originalDate));?>
                                                <a class="text-body mt-5" href=""><small><?= $newDate ?></small></a>
                                            </div>
-                                           <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href=""><?= $brt->judul_konten ?></a>
+                                           <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="<?= base_url('detail/detail_konten/' . $brt->id_konten); ?>"><?= $brt->judul_konten ?></a>                                           
                                            <p class="m-0"><?= substr($brt->isi_konten, 0, 150) . '...'; ?></p>
                                        </div>
                                    </div>
@@ -80,7 +80,7 @@
                                                <?php }; ?>
                                        <?php $originalDate = $brt->tgl_konten; $newDate = date("F-d-Y", strtotime($originalDate));?><a class="text-body" href=""><small><?= $newDate ?></small></a>
                                    </div>
-                                   <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href=""><?=$brt->judul_konten?></a>
+                                   <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="<?= base_url('detail/detail_konten/' . $brt->id_konten); ?>"><?=$brt->judul_konten?></a>
                                </div>
                            </div>
                         <?php endforeach; ?>

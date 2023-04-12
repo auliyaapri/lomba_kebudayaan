@@ -6,12 +6,17 @@
                     <ul class="navbar-nav ml-n2">
                         <li class="nav-item border-right border-secondary">
                             <a class="nav-link text-body small" href="#"><?php echo date("l") . ', '.date('F j'). ', '.date('Y');?></a>
-                        </li>                        
+                        </li>                                                
                         <li class="nav-item border-right border-secondary">
-                            <a class="nav-link text-body small" href="#">Contact</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-body small" href="<?=base_url('auth/login')?>">Login</a>
+                        </li>
+                        <li class="nav-item border-right border-secondary">
+                            <a class="nav-link text-body small" href="<?=base_url('welcome')?>">Tambahkan Artikel</a>
+                            
+                        </li>
+                        <li class="nav-item border-right border-secondary">
+                            <a class="nav-link text-body small" href="<?=base_url('membership')?>">Beli Membership</a>
+                            
                         </li>
                     </ul>
                 </nav>
@@ -19,32 +24,19 @@
             <div class="col-lg-3 text-right d-none d-md-block">
                 <nav class="navbar navbar-expand-sm bg-dark p-0">
                     <ul class="navbar-nav ml-auto mr-n2">
-                        <li class="nav-item">
-                            <a class="nav-link text-body" href="#"><small class="fab fa-twitter"></small></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-body" href="#"><small class="fab fa-facebook-f"></small></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-body" href="#"><small class="fab fa-linkedin-in"></small></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-body" href="#"><small class="fab fa-instagram"></small></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-body" href="#"><small class="fab fa-google-plus-g"></small></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-body" href="#"><small class="fab fa-youtube"></small></a>
-                        </li>
+                    <?php if ($this->session->userdata('username')) { ?>
+                                    <li><div>Selamat Datang <b>  <?php echo $this->session->userdata('username') ?></b> ini bukan premium</div></li>                            
+                    <?php } ; ?>
+
                     </ul>
                 </nav>
             </div>
         </div>
         <div class="row align-items-center bg-white py-3 px-lg-5">
             <div class="col-lg-4">
-                <a href="index.html" class="navbar-brand p-0 d-none d-lg-block">
-                    <h1 class="m-0 display-4 text-uppercase text-primary">Biz<span class="text-secondary font-weight-normal">News</span></h1>
+                <a href="<?=base_url('home')?>" class="navbar-brand p-0 d-none d-flex align-items-center">                
+                <img src="<?= base_url() . '/assets/img/logo_sbi.png' ?>" class="img-fluid w-25">
+                <h1 class="ml-2 m-0 display-4 text-uppercase text-primary"><span class="text-secondary font-weight-normal">Sbi</span></h1>
                 </a>
             </div>
             <div class="col-lg-8 text-center text-lg-right">
@@ -59,7 +51,7 @@
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
             <a href="index.html" class="navbar-brand d-block d-lg-none">
-                <h1 class="m-0 display-4 text-uppercase text-primary">Biz<span class="text-white font-weight-normal">News</span></h1>
+                <h1 class="m-0 display-4 text-uppercase text-primary">Bizs<span class="text-white font-weight-normal">News</span></h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -68,7 +60,17 @@
                 <div class="navbar-nav mr-auto py-0">                    
                     <a aria-current="page" href="<?= base_url('home') ?>" <?= $this->uri->segment(1) == 'home' || $this->uri->segment(1) == '' ? 'class="active nav-link"' : 'class="nav-link"' ?>>Beranda</a>                    
                     <a aria-current="page" href="<?= base_url('kategori') ?>" <?= $this->uri->segment(1) == 'kategori' || $this->uri->segment(1) == 'kategori' ? 'class="active nav-link"' : 'class="nav-link"' ?>>Kategori</a>                    
-                    <a href="<?=base_url('auth/login')?>" class="nav-item nav-link">MASUK</a>
+                    <?php if ($this->session->userdata('username')) { ?>
+                                    <li>
+                                        <a href="<?=base_url('auth/logout')?>" class="nav-item nav-link">Log out</a>
+                                        
+                                    </li>      
+                                    <?php } else { ?>
+                                    <!-- Jika blm login maka akan ada perintah suruh login -->
+                                    <li>
+                                    <a href="<?=base_url('auth/login')?>" class="nav-item nav-link">Login</a>
+                                        </li>
+                                <?php }; ?>                                          
                     <a href="single.html" class="nav-item nav-link">DAFTAR</a>              
                 </div>
 

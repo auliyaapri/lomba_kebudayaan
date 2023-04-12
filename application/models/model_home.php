@@ -10,6 +10,18 @@ class Model_home extends CI_Model
         $result = $this->db->get('upload_content',4,0);        
         return $result;
     }
+    public function data_user_konten(){
+      
+        
+        $this->db->select('*');
+        $this->db->from('upload_content');
+        $this->db->join('tb_user', 'tb_user.id_user = upload_content.id_user');
+        // $this->db->where(array('tb_user.id_u' => 17));
+        // execute query  
+        $join_query = $this->db->get();
+        return $join_query->result();
+        
+    }
     public function data_featured_news()
     {
         // return $this->db->get('upload_content');
@@ -19,7 +31,6 @@ class Model_home extends CI_Model
     }
     public function data_berita_terbaru()
     {
-        // return $this->db->get('upload_content');
         $this->db->order_by("tgl_konten", "asc");
         $result = $this->db->get('upload_content',4,0);
         

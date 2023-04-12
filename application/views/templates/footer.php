@@ -6,6 +6,18 @@
 
     <!-- Template Javascript -->
     <script src="<?=base_url()?>assets/js/main.js"></script>
+    <script src="<?=base_url()?>assets/js2/sweetalert2.all.min.js"></script>
+    <script language="text/Javascript">
+      cleared[0] = cleared[1] = cleared[2] = 0;
+
+      function clearField(t) {
+          if (!cleared[t.id]) {
+              cleared[t.id] = 1;
+              t.value = '';
+              t.style.color = '#fff';
+          }
+      }
+  </script>
 </body>
 
 </html>

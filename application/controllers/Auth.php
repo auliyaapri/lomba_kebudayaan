@@ -19,11 +19,10 @@ class Auth extends CI_Controller
 
             if ($auth == FALSE) {
                 // Untuk ngasih tau kalau gagal login
-                $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show m-0" role="alert">
+                $this->session->set_flashdata('pesan', '<div class="mt-5 alert alert-danger alert-dismissible fade show" role="alert">
                 <strong>Username atau Password</strong> anda salah!
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-               
-                </button>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
                 </button>
               </div>');
                 redirect('auth/login');
@@ -36,10 +35,13 @@ class Auth extends CI_Controller
                         // jadi disini role_id 1 = admin
                         // jadi disini role_id 2 = user
                     case 1:
+                        $this->session->set_flashdata('success_login', 'Berhasil melakukan ');
 
                         redirect('admin/dashboard_admin');
                         break;
                     case 2:
+                        $this->session->set_flashdata('success_login', 'Berhasil melakukan ');
+
                         redirect('welcome');
                         break;
                     default:
@@ -52,7 +54,7 @@ class Auth extends CI_Controller
     public function logout()
     {
         $this->session->sess_destroy();
-        $this->session->set_flashdata('message','kamu berhasil LOGOUT');
-        redirect('auth/login');
+        $this->session->set_flashdata('message', 'kamu berhasil LOGOUT');
+        redirect('home');
     }
 }

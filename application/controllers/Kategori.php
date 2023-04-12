@@ -11,6 +11,7 @@ class Kategori extends CI_Controller {
 		$this->load->view('kategori', $data);
 		
 		$this->load->view('templates/footer_content',$berita_terbaru);
+		$this->load->view('templates/footer');
 	}
 	public function makanan() {
 		$keyword = $this->input->post('keyword');		

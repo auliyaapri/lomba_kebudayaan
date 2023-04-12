@@ -9,11 +9,6 @@
             <?php $folder          = $brg->kategori; ?>
             <?php $daerah          = $brg->daerah; ?>
             <?php $kategori_folder = $brg->kategori; ?>
-
-            <!-- ========== PENGKONDISIAN ==========-->
-            <!-- <img src="<?= base_url() . $folder . $nama_kategori . $brg->gambar . '/' ?>" alt="" class="card-img-top w-75"> -->
-            <!-- <img src="<?= base_url() . '/upload_image/' . $daerah . '/' . strtolower($kategori_folder) . '/' . $brg->gambar ?>" class="card-img-top w-75"> -->
-
           </div>
 
         </div>
@@ -60,7 +55,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="text-content">
-              <h4><?php echo $brg->kategori;  ?></h4>
+              <h4><?php echo $brg->kategori;  ?> / <?php echo $brg->daerah;  ?></h4>
               <h2><?php echo $brg->judul_konten;  ?></h2>
             </div>
           </div>
@@ -74,6 +69,8 @@
 
   <section class="blog-posts grid-system">
     <div class="container">
+    
+      
       <div class="row">
         <div class="col-lg-8">
           <div class="all-blog-posts">
@@ -89,44 +86,47 @@
                       <h4><?php echo $brg->judul_konten;  ?></h4>
                     </a>
                     <ul class="post-info">
-                      <li><a href="#">Admin</a></li>
-                      <li><a href="#">May 12, 2020</a></li>
-                      <li><a href="#">10 Comments</a></li>
+                      <li>Penulis <a class="font-weight-bold" href="#"><?=$brg->nama_penulis?></li>
+                      <li><?php $originalDate = $brg->tgl_konten; $newDate = date("F-d-Y", strtotime($originalDate));?><a href="" ><?= $newDate ?></a></li>                      
                     </ul>
                     <p><?php echo $brg->isi_konten;  ?></p>
+                    <br>
+                    <br>
+                    <br>
+                    
                   </div>
+                
                 <?php endforeach; ?>
                 </div>
               </div>
-             
             </div>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="sidebar">
             <div class="row">
-              <div class="col-lg-12">
+              <!-- <div class="col-lg-12">
                 <div class="sidebar-item search">
                   <form id="search_form" name="gs" method="GET" action="#">
                     <input type="text" name="q" class="searchText" placeholder="type to search..." autocomplete="on">
                   </form>
                 </div>
-              </div>
+              </div> -->
               <div class="col-lg-12">
                 <div class="sidebar-item recent-posts">
                   <div class="sidebar-heading">
                     <div class="sidebar-item recent-posts">
                       <div class="sidebar-heading">
-                        <h2>Recent Posts</h2>
+                        <h2>Upload Terbaru</h2>
                       </div>
                       <div class="content">
                         <ul>
-                          <?php foreach ($home as $hm) : ?>
+                          <?php foreach ($home as $brg) : ?>
                             <li>
-                              <a href="<?= base_url('detail/detail_konten/' . $hm->id_konten); ?>">
-                                <h5><?= $hm->judul_konten; ?></h5>
+                              <a href="<?= base_url('detail/detail_konten/' . $brg->id_konten); ?>">
+                                <h5><?= $brg->judul_konten; ?></h5>
                               </a>
-                              <?php $originalDate = $hm->tgl_konten;
+                              <?php $originalDate = $brg->tgl_konten;
                               $newDate = date("d-m-Y", strtotime($originalDate)); ?>
                               <h6 class="text-danger" href=""><?= $newDate ?></h6>
                             </li>
@@ -137,6 +137,10 @@
                   </div>
                 </div>
               </div>
+              
+            
+            
+
             </div>
           </div>
         </div>
@@ -144,44 +148,6 @@
     </div>
     </div>
   </section>
-
-
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <ul class="social-icons">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Behance</a></li>
-            <li><a href="#">Linkedin</a></li>
-            <li><a href="#">Dribbble</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-12">
-          <div class="copyright-text">
-            <p>Copyright 2020 Stand Blog Co.
-
-              | Design: <a rel="nofollow" href="https://templatemo.com" target="_parent">TemplateMo</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="<?= base_url() ?>assets_blog/vendor/jquery/jquery.min.js"></script>
-  <script src="<?= base_url() ?>assets_blog/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-
-  <!-- Additional Scripts -->
-  <script src="<?= base_url() ?>assets_blog/js/custom.js"></script>
-  <script src="<?= base_url() ?>assets_blog/js/owl.js"></script>
-  <script src="<?= base_url() ?>assets_blog/js/slick.js"></script>
-  <script src="<?= base_url() ?>assets_blog/js/isotope.js"></script>
-  <script src="<?= base_url() ?>assets_blog/js/accordions.js"></script>
-
 
   <script language="text/Javascript">
     cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field

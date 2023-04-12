@@ -23,7 +23,7 @@
   <img src="<?= base_url() . '/assets/img/kategori_alat_musik.png' ?>"alt="...">
     <div class="card-content">
       <h2>
-        Alat MusikS
+        Alat Musik
       </h2>
       <p>         
       Alat musik tradisional adalah salah satu budaya bangsa Indonesia. Dari Sabang sampai Merauke, beragam alat musik dimainkan di tiap daerah. Alat musik tradisional sendiri adalah alat musik yang berakar pada tradisi masyarakat tertentu.
@@ -57,7 +57,7 @@
     </div>
   </div>
   <div class = "card">
-  <img src="<?= base_url() . '/assets/img/kategori_menari2.png' ?>"alt="...">
+  <img src="<?= base_url() . '/assets/img/kategori_menari1.png' ?>"alt="...">
     <div class="card-content">
       <h2>
         Tarian
