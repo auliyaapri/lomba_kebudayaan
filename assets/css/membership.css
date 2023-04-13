@@ -50,6 +50,8 @@ p {
   font-size: 15px;
   line-height: 1.6;
   letter-spacing: 0.03em;
+  text-align: center;
+  width: 80%;
 }
 .icon-wrapper {
   background-color: #ffcc00;

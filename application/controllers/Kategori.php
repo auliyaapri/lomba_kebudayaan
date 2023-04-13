@@ -6,8 +6,9 @@ class Kategori extends CI_Controller {
 	public function index() {
 		$data['kategori'] = $this->model_kategori->data_kategori()->result();	
 		$berita_terbaru['berita_terbaru'] = $this->model_home->data_berita_terbaru()->result();	
+		$data_home_navbar['data_home_navbar'] = $this->model_home->data_home_navbar()->result();
 		$this->load->view('templates/header');
-		$this->load->view('templates/navbar');
+		$this->load->view('templates/navbar', $data_home_navbar);
 		$this->load->view('kategori', $data);
 		
 		$this->load->view('templates/footer_content',$berita_terbaru);

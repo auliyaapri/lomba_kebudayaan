@@ -53,7 +53,8 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Upload Bukti Bayarr</label>                
-                <input type="file" name="gambar" class="form-control">
+                <input type="file" name="gambar" class="form-control" required>
+                
                 
             </div>
             <a href="<?= base_url('membership') ?>" class="btn btn-danger"><i class="fa fa-chevron-circle-left"></i> Kembali</a>

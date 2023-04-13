@@ -4,7 +4,7 @@ class Tambah_membership extends CI_Controller
 
     public function index()
     {
-        // $this->form_validation->set_rules('judul_konten', 'judul konten ', 'required', ['required' => ' Wajib diisi!']);
+        
         $nama_paket       = $this->input->post('nama_paket');
         $keterangan       = $this->input->post('keterangan');
         $harga            = $this->input->post('harga');
@@ -40,6 +40,6 @@ class Tambah_membership extends CI_Controller
         // $this->session->set_flashdata('pesan','<script>alert("Data berhasil ditambahkan")</script>');  
         $this->session->set_flashdata('success_beli', 'Berhasil melakukan ');
         
-        redirect('membership/basic');
+        redirect('home');
     }
 }

@@ -28,9 +28,11 @@
           </div>
           <h3>Standard</h3>
           <h4>Rp. 10.000</h4>
+          <center>
           <p>
-            user dapat mengupload lebih dari 10 konten.
+          Pada paket ini pengguna bisa menambahkan artikel dalam batas waktu hanya berlaku 3 hari saja.
           </p>
+          </center>
         </div>
       </a>
       <a href="<?=base_url('membership/basic')?>" class="column">
@@ -40,22 +42,23 @@
           </div>
           <h3>Basic</h3>
           <h4>Rp. 15.000</h4>
-          <p>
-            user dapat mengupload lebih dari 20 konten
-
-          </p>
+          <center>
+            <p>Pada paket ini pengguna bisa menambahkan artikel dalam batas waktu hanya berlaku 7 hari saja.</p>
+          </center>
         </div>
       </a>
       <a href="<?=base_url('membership/pro')?>" class="column">
         <div class="card">
           <div class="icon-wrapper">
-          <i class="fas fa-rocket"></i>
+            <i class="fas fa-rocket"></i>
           </div>
           <h3>Pro</h3>
           <h4>Rp. 20.000</h4>
+        <center>
           <p>
-            user dapat mengupload unlimited
+          Pada paket ini pengguna bisa menambahkan artikel dalam batas waktu hanya berlaku 2 minggu saja.
           </p>
+        </center>
         </div>
       </a>
 
