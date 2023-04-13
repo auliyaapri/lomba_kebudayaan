@@ -57,7 +57,7 @@
 
 
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a type="submit" class="btn btn-danger" href="<?= base_url('home') ?>"><i class="fas fa-chevron-left"></i> Kembali</a>
+                <a type="submit" class="btn btn-danger" href="<?= base_url('home') ?>"><i class="fa fa-chevron-circle-left"></i>  Kembali</a>
         </form>
 
     </div>

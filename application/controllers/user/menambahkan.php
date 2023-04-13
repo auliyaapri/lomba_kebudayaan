@@ -49,3 +49,5 @@ class Menambahkan extends CI_Controller
         }
     }
 }
+
+

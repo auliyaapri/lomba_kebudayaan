@@ -14,10 +14,14 @@ section {
   display: flex;
   flex-wrap: wrap;
 }
-.column {
+a.column {
   width: 100%;
   padding: 0 1em 1em 1em;
   text-align: center;
+
+}
+a.column {
+  text-decoration: none;
 }
 .card {
   width: 100%;
@@ -35,7 +39,11 @@ h3 {
   font-size: 20px;
   font-weight: 600;
   color: #1f194c;
-  margin: 1em 0;
+  margin: .5em 0;
+}
+h4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 p {
   color: #575a7b;
@@ -83,7 +91,7 @@ p {
   section {
     padding: 1em 3em;
   }
-  .column {
+  a.column {
     flex: 0 0 33.33%;
     max-width: 33.33%;
   }

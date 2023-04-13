@@ -36,6 +36,7 @@
               <div class="text-center mb-5">
                 <h3>Login to <strong>SBI</strong></h3>
                 <?php echo $this->session->flashdata('pesan'); ?>
+                
                 <!-- <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
               </div>
               <form action="<?= base_url('auth/login') ?>" method="post">

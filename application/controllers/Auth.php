@@ -42,7 +42,7 @@ class Auth extends CI_Controller
                     case 2:
                         $this->session->set_flashdata('success_login', 'Berhasil melakukan ');
 
-                        redirect('welcome');
+                        redirect('Home');
                         break;
                     default:
                         break;

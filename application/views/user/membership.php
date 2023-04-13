@@ -20,40 +20,44 @@
       <h2 class="section-heading">Membership</h2>
     </div>
     <div class="row">
-      <div class="column">
+      
+      <a href="<?=base_url('membership/standard')?>" class="column">
         <div class="card">
           <div class="icon-wrapper">
           <i class="fas fa-paper-plane"></i>
           </div>
           <h3>Standard</h3>
+          <h4>Rp. 10.000</h4>
           <p>
             user dapat mengupload lebih dari 10 konten.
           </p>
         </div>
-      </div>
-      <div class="column">
+      </a>
+      <a href="<?=base_url('membership/basic')?>" class="column">
         <div class="card">
           <div class="icon-wrapper">
           <i class="fas fa-plane"></i>
           </div>
           <h3>Basic</h3>
+          <h4>Rp. 15.000</h4>
           <p>
             user dapat mengupload lebih dari 20 konten
 
           </p>
         </div>
-      </div>
-      <div class="column">
+      </a>
+      <a href="<?=base_url('membership/pro')?>" class="column">
         <div class="card">
           <div class="icon-wrapper">
           <i class="fas fa-rocket"></i>
           </div>
           <h3>Pro</h3>
+          <h4>Rp. 20.000</h4>
           <p>
             user dapat mengupload unlimited
           </p>
         </div>
-      </div>
+      </a>
 
 
     </div>

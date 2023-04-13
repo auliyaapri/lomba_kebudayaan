@@ -15,6 +15,22 @@
             confirmButtonText: 'Oke'
         })
     <?php } ?>
+    <?php if ($this->session->flashdata('success_beli')) { ?>
+        Swal.fire({
+            title: 'Success!',
+            text: 'Membership berhasil di beli!',
+            icon: 'success',
+            confirmButtonText: 'Oke'
+        })
+    <?php } ?>
+    <?php if ($this->session->flashdata('belum_login')) { ?>
+        Swal.fire({
+            title: 'Success!',
+            text: 'Anda Belum Login',
+            icon: 'success',
+            confirmButtonText: 'Oke'
+        })
+    <?php } ?>
     <?php if ($this->session->flashdata('success_tambah_keranjang')) { ?>
         Swal.fire({
             title: 'Success!',
