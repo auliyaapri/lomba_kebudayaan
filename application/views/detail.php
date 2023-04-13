@@ -87,7 +87,8 @@
                     </a>
                     <ul class="post-info">
                       <li>Penulis <a class="font-weight-bold" href="#"><?=$brg->nama_penulis?></li>
-                      <li><?php $originalDate = $brg->tgl_konten; $newDate = date("F-d-Y", strtotime($originalDate));?><a href="" ><?= $newDate ?></a></li>                      
+                      <li><?php $originalDate = $brg->tgl_konten; 
+                      $newDate = date("F-d-Y", strtotime($originalDate));?><a href="" ><?= $newDate ?></a></li>                      
                     </ul>
                     <p><?php echo $brg->isi_konten;  ?></p>
                     <br>

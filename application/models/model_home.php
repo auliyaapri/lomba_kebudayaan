@@ -10,6 +10,12 @@ class Model_home extends CI_Model
         $result = $this->db->get('upload_content',4,0);        
         return $result;
     }
+    public function data_home_navbar()
+    {
+        // return $this->db->get('upload_content');
+        $result = $this->db->get('membership');        
+        return $result;
+    }
     public function data_user_konten(){
       
         

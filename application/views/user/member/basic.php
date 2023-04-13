@@ -22,6 +22,10 @@
                 <input class="form-control" type="text" value="<?php echo $nama_paket ?>" placeholder="Standard" name="nama_paket" readonly>                
             </div>
             <div class="form-group">
+                <label for="exampleInputEmail1">Nama Pembeli / Username</label>
+                <input class="form-control" type="text" value="<?php echo $this->session->userdata('username') ?>" placeholder="Standard" name="nama_pembeli" readonly>                
+            </div>
+            <div class="form-group">
                 <label for="exampleInputEmail1">Keterangan</label>
                 <input class="form-control" type="text" value="user dapat mengupload lebih dari 10 konten." name="keterangan" placeholder="user dapat mengupload lebih dari 10 konten. " readonly>
             </div>
@@ -32,6 +36,12 @@
             <div class="form-group">
                 <label for="exampleInputEmail1">Nomor rekening</label>
                 <input class="form-control" type="text" value="19210483" name="nomor_rekening" placeholder="19210483" readonly>
+            </div>
+            <div class="form-group">
+                
+                <label for="exampleInputEmail1">Berlaku hingga</label>
+                <?php $tgl_membership = date("F-d-Y", strtotime('+2 days')) ; ?>
+                <input class="form-control" type="text" value="<?=$tgl_membership?>" placeholder="19210483" readonly>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Bayar Melalui</label>

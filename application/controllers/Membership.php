@@ -21,8 +21,7 @@ class Membership extends CI_Controller {
 			// $this->session->set_flashdata('success_beli', 'Berhasil melakukan ');
 	
 			// $this->session->set_flashdata('belum_login', 'Berhasil melakukan ');
-		
-				redirect('auth/login');
+			redirect('auth/login');
 			
 	
         }

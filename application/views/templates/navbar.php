@@ -25,7 +25,12 @@
                 <nav class="navbar navbar-expand-sm bg-dark p-0">
                     <ul class="navbar-nav ml-auto mr-n2">
                     <?php if ($this->session->userdata('username')) { ?>
-                                    <li><div>Selamat Datang <b>  <?php echo $this->session->userdata('username') ?></b> ini bukan premium</div></li>                            
+                        <?php foreach ($data_home_navbar as $dhn) :?>
+                            
+
+                                    <li><div>Selamat Datang <b>  <?php echo $this->session->userdata('username') ?></b> / <?=$dhn->nama_paket?></div></li>                            
+                                    <?php break; ?>
+                                    <?php endforeach; ?>
                     <?php } ; ?>
 
                     </ul>

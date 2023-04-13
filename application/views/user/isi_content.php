@@ -14,7 +14,31 @@
 
 <body>
     <div class="container mt-5">
+        <?php foreach ($data_home_navbar as $dhn ) :?>
+            
+                <?php $originalDate = $dhn->tgl_membership; 
+                $newDate = date("F-d-Y", strtotime('+4 days', strtotime($originalDate))); ?>
+                <a href="" ><?= $newDate ?></a>
+            
+            
+        <?php endforeach;?>
+
+        <?php echo $newDate ; ?>
+        <br>
+        <br>
+        <br>
+        <?php $tgl_sekarang = date("F-d-Y"); ?>
+        
+        <?php if ($newDate > $tgl_sekarang) :?>
+            <h1 class="text-center">Masukan KontenSSS</h1>
+            
+            <?php endif; ?>
+            
+        
+        
         <h1 class="text-center">Masukan Konten</h1>
+
+
         <form action="<?= base_url() . 'user/menambahkan/tambah_aksi'; ?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="exampleInputEmail1">Judul</label>

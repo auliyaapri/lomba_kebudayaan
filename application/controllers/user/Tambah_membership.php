@@ -11,6 +11,7 @@ class Tambah_membership extends CI_Controller
         $nomor_rekening   = $this->input->post('nomor_rekening');
         $bank             = $this->input->post('bank');
         $nama_pembeli     = $this->input->post('nama_pembeli');
+        
         $gambar             = $_FILES['gambar']['name'];
         if ($gambar = '') {
         } else {
@@ -32,11 +33,13 @@ class Tambah_membership extends CI_Controller
             'nomor_rekening'    => $nomor_rekening,
             'bank'              => $bank,
             'nama_pembeli'      => $nama_pembeli,
+            
             'gambar'            => $gambar
         );
         $this->model_membership->tambah_membershipp($data, 'membership');
         // $this->session->set_flashdata('pesan','<script>alert("Data berhasil ditambahkan")</script>');  
         $this->session->set_flashdata('success_beli', 'Berhasil melakukan ');
-        redirect('membership/standard');
+        
+        redirect('membership/basic');
     }
 }
