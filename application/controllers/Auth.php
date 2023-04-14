@@ -13,6 +13,7 @@ class Auth extends CI_Controller
             $this->load->view('templates/header');
             $this->load->view('login');
             $this->load->view('templates/footer');
+            $this->load->view('templates/sweetalert');
         } else {
             // else ini apabila berhasil
             $auth = $this->model_auth->cek_login();
@@ -51,6 +52,13 @@ class Auth extends CI_Controller
             }
         }
     }
+    public function register()
+    {
+        $this->load->view('register');
+
+    }
+
+
 
     public function logout()
     {

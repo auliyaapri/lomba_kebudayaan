@@ -44,12 +44,9 @@
             <div class="form-group">
                 <label for="exampleInputEmail1">Upload Bukti Bayarr</label>                
                 <input type="file" name="gambar" class="form-control" required>
-                
             </div>
             <a href="<?= base_url('membership') ?>" class="btn btn-danger"><i class="fa fa-chevron-circle-left"></i> Kembali</a>
             <button class="btn btn-success" type="submit"><i class="fas fa-shopping-cart"></i> Lanjutkan Pembelian</button>            
-
-
         </form>
 
 

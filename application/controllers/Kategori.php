@@ -17,8 +17,9 @@ class Kategori extends CI_Controller {
 	public function makanan() {
 		$keyword = $this->input->post('keyword');		
 		$berita_terbaru['berita_terbaru'] = $this->model_home->data_berita_terbaru()->result();	
+		$data_home_navbar['data_home_navbar'] = $this->model_home->data_home_navbar()->result();
 		$this->load->view('templates/header');
-		$this->load->view('templates/navbar');
+		$this->load->view('templates/navbar',$data_home_navbar);
 		if ($keyword) {
 			$datass['makanan'] = $this->model_kategori->get_keyword_makanan($keyword);
 			$this->load->view('kategori/index', $datass);
@@ -38,8 +39,9 @@ class Kategori extends CI_Controller {
 		$keyword = $this->input->post('keyword');
 		$berita_terbaru['berita_terbaru'] = $this->model_home->data_berita_terbaru()->result();	
 		// $data['makanan'] = $this->model_kategori->data_alat_musik()->result();		
+		$data_home_navbar['data_home_navbar'] = $this->model_home->data_home_navbar()->result();
 		$this->load->view('templates/header');
-		$this->load->view('templates/navbar');
+		$this->load->view('templates/navbar',$data_home_navbar);
 		if ($keyword) {
 			$datass['makanan'] = $this->model_kategori->get_keyword_alat_musik($keyword);
 			$this->load->view('kategori/index', $datass);
@@ -54,9 +56,9 @@ class Kategori extends CI_Controller {
 	public function tarian() {
 		$keyword = $this->input->post('keyword');
 		$berita_terbaru['berita_terbaru'] = $this->model_home->data_berita_terbaru()->result();	
-
+		$data_home_navbar['data_home_navbar'] = $this->model_home->data_home_navbar()->result();
 		$this->load->view('templates/header');
-		$this->load->view('templates/navbar');
+		$this->load->view('templates/navbar',$data_home_navbar);
 		if ($keyword) {
 			$datass['makanan'] = $this->model_kategori->get_keyword_tarian($keyword);
 			$this->load->view('kategori/index', $datass);

@@ -24,8 +24,8 @@
             $newDate = date("F-d-Y"); 
 
             ?>
-            <a href=""><?= $newDate ?></a>
-            <?php echo $paket = $dhn->nama_paket ?>
+            <!-- <a href=""><?= $newDate ?></a>
+            <?php echo $paket = $dhn->nama_paket ?> -->
 
             <?php
             if ($paket === "basic") {
@@ -106,7 +106,6 @@
 
                 </select>
             </div>
-
             <div class="form-group">
                 <label for="exampleInputEmail1">Pilih Kategori</label>
                 <select class="custom-select mb-3 form-control" name="kategori">

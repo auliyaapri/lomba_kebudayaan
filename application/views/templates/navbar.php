@@ -15,8 +15,7 @@
                             
                         </li>
                         <li class="nav-item border-right border-secondary">
-                            <a class="nav-link text-body small" href="<?=base_url('membership')?>">Beli Membership</a>
-                            
+                            <a class="nav-link text-body small" href="<?=base_url('membership')?>">Beli Membership</a>                            
                         </li>
                     </ul>
                 </nav>
@@ -25,12 +24,19 @@
                 <nav class="navbar navbar-expand-sm bg-dark p-0">
                     <ul class="navbar-nav ml-auto mr-n2">
                     <?php if ($this->session->userdata('username')) { ?>
-                        <?php foreach ($data_home_navbar as $dhn) :?>
+                        <?php foreach ($data_home_navbar as $dhn) :?>                                                                           
+                            <?php $namaUser =  $this->session->userdata('username'); ?>
+                            <?php
+                            if ($namaUser ) {
+                                # code...
+                            }                                                        
+                            ?>
                             
+                                
+                            <li><a href="<?=base_url('Profile')?>"><div>Selamat Datang <?=  $namaUser?></div></a> </li>   
 
-                                    <li><div>Selamat Datang <b>  <?php echo $this->session->userdata('username') ?></b> / <?=$dhn->nama_paket?></div></li>                            
-                                    <?php break; ?>
-                                    <?php endforeach; ?>
+                            <?php break; ?>
+                            <?php endforeach; ?>
                     <?php } ; ?>
 
                     </ul>
@@ -40,8 +46,9 @@
         <div class="row align-items-center bg-white py-3 px-lg-5">
             <div class="col-lg-4">
                 <a href="<?=base_url('home')?>" class="navbar-brand p-0 d-none d-flex align-items-center">                
-                <img src="<?= base_url() . '/assets/img/logo_sbi.png' ?>" class="img-fluid w-25">
-                <h1 class="ml-2 m-0 display-4 text-uppercase text-primary"><span class="text-secondary font-weight-normal">Sbi</span></h1>
+                <img src="<?= base_url() . '/assets/img/logo_sbi.png' ?>" height="70px">
+                <!-- <h1 class="ml-2 m-0 display-4 text-uppercase text-primary"><span class="text-secondary font-weight-normal">Sbi</span></h1> -->
+                <h5 style="font-size: 40px;" class="m-0 pl-2 display-4 text-primary font-weight-bold"><span class="text-secondary font-weight-bolder">Seputar Budaya</span> Indonesia</h5>
                 </a>
             </div>
             <div class="col-lg-8 text-center text-lg-right">
@@ -76,7 +83,7 @@
                                     <a href="<?=base_url('auth/login')?>" class="nav-item nav-link">Login</a>
                                         </li>
                                 <?php }; ?>                                          
-                    <a href="single.html" class="nav-item nav-link">DAFTAR</a>              
+                    <a href="<?=base_url('auth/register');?>" class="nav-item nav-link">DAFTAR</a>              
                 </div>
 
 
