@@ -10,10 +10,12 @@ class Welcome extends CI_Controller {
 			$this->session->set_flashdata('belum_login', 'Berhasil melakukan ');
 			redirect('auth/login');
         }
+
     }
 	public function index()
 	{
-        
+   
+   
         // $id_user = $this->uri->segment(2);
         $isi_konten['isi_konten'] = $this->model_home->isi_konten()->result();
         // $isi_konten['isi_konten'] = $this->model_home->isi_konten($id_user)->result();              

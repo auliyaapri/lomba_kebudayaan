@@ -11,7 +11,8 @@
                             <a class="nav-link text-body small" href="<?=base_url('auth/login')?>">Login</a>
                         </li>
                         <li class="nav-item border-right border-secondary">
-                            <a class="nav-link text-body small" href="<?=base_url('welcome')?>">Tambahkan Artikel</a>
+                        <?php $namaUser =  $this->session->userdata('username'); ?>    
+                            <a class="nav-link text-body small" href="<?=base_url('user/artikle/index/'.$namaUser)?>">Tambahkan Artikel</a>
                             
                         </li>
                         <li class="nav-item border-right border-secondary">
@@ -26,10 +27,7 @@
                     <ul class="navbar-nav ml-auto mr-n2">
                     <?php if ($this->session->userdata('username')) { ?>
                         <?php foreach ($data_home_navbar as $dhn) :?>                                                                           
-                            <?php $namaUser =  $this->session->userdata('username'); ?>
-                         
-                            
-                            
+                            <?php $namaUser =  $this->session->userdata('username'); ?>                         
                             <li><a href="<?=base_url('user/profile/index/'.$namaUser)?>"><div>Selamat Datang <?=  $namaUser?></div></a> </li>   
 
                             <?php break; ?>
@@ -76,9 +74,7 @@
                                     </li>      
                                     <?php } else { ?>
                                     <!-- Jika blm login maka akan ada perintah suruh login -->
-                                    <li>
-                                    <a href="<?=base_url('auth/login')?>" class="nav-item nav-link">Login</a>
-                                        </li>
+                                    <li><a href="<?=base_url('auth/login')?>" class="nav-item nav-link">Login</a></li>
                                 <?php }; ?>                                          
                     <a href="<?=base_url('auth/register');?>" class="nav-item nav-link">DAFTAR</a>              
                 </div>

@@ -18,6 +18,10 @@ class Tambah_membership extends CI_Controller
         $gambar             = $_FILES['gambar']['name'];
         if ($gambar = '') {
         } else {
+            
+            
+
+
             if ($nama_paket == $nama_paket) {
                 $config['upload_path']     = './upload_bukti/' . $nama_paket . '/';
             }

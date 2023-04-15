@@ -28,8 +28,8 @@
             <div class="form-group">
                 
                 <?php foreach ($data_user as $ud) : ?>                    
-                    <input class="form-control" type="text" value="<?php echo $ud->id_user ?>" name="id_user" readonly>                
-                    <input class="form-control" type="role_id"value="<?php echo $ud->role_id ?>" name="role_id" readonly>                
+                    <input class="form-control" type="hidden" value="<?php echo $ud->id_user ?>" name="id_user" readonly>                
+                    <input class="form-control" type="hidden"value="<?php echo $ud->role_id ?>" name="role_id" readonly>                
                     
                     <?php endforeach ; ?>
             </div>

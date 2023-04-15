@@ -39,15 +39,12 @@ class Model_home extends CI_Model
 
         // ============
         $this->db->select('*');
-        $this->db->where('username', $id_user);
         $this->db->from('membership');
         $this->db->join('tb_user', 'tb_user.id_user = membership.id_user');
+        $this->db->where('username', $id_user);
         $query = $this->db->get();
         // ============
-//         $this->db->from('tb_user');
-// $query = $this->db->get();
-            
-                return $query;
+        return $query;
     }
 
 //     public function data_user_konten($id_user)
