@@ -14,7 +14,13 @@
 
 <body>
     <div class="container mt-5">
-        <?php foreach ($data_home_navbar as $dhn) : ?>
+    
+        
+        
+        <?php foreach ($isi_konten as $dhn) : ?>
+
+            
+            
 
             <?php $originalDate = $dhn->tgl_membership;
             
@@ -22,10 +28,9 @@
             
             // $newDate = date("F-d-Y", strtotime('-0 days', strtotime($originalDate))); 
             $newDate = date("F-d-Y"); 
-
             ?>
-            <!-- <a href=""><?= $newDate ?></a>
-            <?php echo $paket = $dhn->nama_paket ?> -->
+            <!-- <a href=""><?= $newDate ?></a>-->
+            <?php $paket = $dhn->nama_paket ?> 
 
             <?php
             if ($paket === "basic") {
@@ -38,13 +43,7 @@
             }            
             ?>
         <?php endforeach; ?>
-
-        <!-- <?php echo $newDate; ?> -->
-        <!-- <br> -->
-        <!-- <br> -->
-        <!-- <br> -->
-        <!-- <?php $tgl_sekarang = date("F-d-Y"); ?> -->
-        <!-- <?php echo $tgl_sekarang ?>  -->
+        
 
         <!-- =============== IF =============== -->
         <?php if ($paket == TRUE && $new_date < $newDate ) { ?>
@@ -58,21 +57,21 @@
             <form action="<?= base_url() . 'user/menambahkan/tambah_aksi'; ?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Judul</label>
-                    <input class="form-control" type="text" value="<?php echo $this->session->userdata('username') ?>" placeholder="Standard" name="nama_pembeli" readonly>
+                    <input class="form-control" type="text"readonly>
                     <div class="text-danger small mt-2"> <?php echo validation_errors('Judul Konten'); ?></div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Pilih Daerah</label>
-                    <input class="form-control" type="text" value="<?php echo $this->session->userdata('username') ?>" placeholder="Standard" name="nama_pembeli" readonly>
+                    <input class="form-control" type="text"readonly>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Pilih Kategori</label>
-                    <input class="form-control" type="text" value="<?php echo $this->session->userdata('username') ?>" placeholder="Standard" name="nama_pembeli" readonly>
+                    <input class="form-control" type="text"readonly>
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputEmail1">Isi Konten</label>
-                    <textarea class="form-control" name="isi_konten" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" readonly></textarea>
+                    <textarea class="form-control" name="isi_konten"  id="floatingTextarea2" style="height: 100px" readonly></textarea>
                     <div class="text-danger small mt-2"> <?php echo validation_errors('Isi Konten'); ?></div>
 
                     <div class="form-group">
@@ -89,7 +88,9 @@
             </form>
         <!-- =============== ELSE IF =============== -->
         <?php } elseif ($paket == TRUE && $new_date >= $newDate ) {?>
-        <h1 class="text-center">Masukan Konten</h1>
+            
+            
+        <h1 class="text-center">Masukann Konten</h1>
         <form action="<?= base_url() . 'user/menambahkan/tambah_aksi'; ?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="exampleInputEmail1">Judul</label>

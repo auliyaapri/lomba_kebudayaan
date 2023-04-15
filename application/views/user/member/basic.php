@@ -22,27 +22,35 @@
                 <input class="form-control" type="text" value="<?php echo $nama_paket ?>" placeholder="Standard" name="nama_paket" readonly>                
             </div>
             <div class="form-group">
+                
+                <?php foreach ($data_user as $ud) : ?>                    
+                    <input class="form-control" type="text" value="<?php echo $ud->id_user ?>" name="id_user" readonly>                
+                    <input class="form-control" type="role_id"value="<?php echo $ud->role_id ?>" name="role_id" readonly>                
+                    
+                    <?php endforeach ; ?>
+            </div>
+            <div class="form-group">
                 <label for="exampleInputEmail1">Nama Pembeli / Username</label>
                 <input class="form-control" type="text" value="<?php echo $this->session->userdata('username') ?>" placeholder="Standard" name="nama_pembeli" readonly>                
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Keterangan</label>
-                <input class="form-control" type="text" value="user dapat mengupload lebih dari 10 konten." name="keterangan" placeholder="user dapat mengupload lebih dari 10 konten. " readonly>
+                <input class="form-control" type="text" value="Pada paket ini pengguna bisa menambahkan artikel dalam batas waktu hanya berlaku 7 hari saja." name="keterangan" placeholder="user dapat mengupload lebih dari 10 konten. " readonly>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Harga</label>
-                <input class="form-control" type="text" value="Rp. 10.000" name="harga" placeholder="Rp. 10.000 " readonly>
+                <input class="form-control" type="text" value="Rp. 15.000" name="harga" placeholder="Rp. 15.000 " readonly>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Nomor rekening</label>
                 <input class="form-control" type="text" value="19210483" name="nomor_rekening" placeholder="19210483" readonly>
             </div>
             <div class="form-group">
-                
                 <label for="exampleInputEmail1">Berlaku hingga</label>
-                <?php $tgl_membership = date("F-d-Y", strtotime('+2 days')) ; ?>
+                <?php $tgl_membership = date("F-d-Y", strtotime('+7 days')) ; ?>
                 <input class="form-control" type="text" value="<?=$tgl_membership?>" placeholder="19210483" readonly>
             </div>
+            
             <div class="form-group">
                 <label for="exampleInputEmail1">Bayar Melalui</label>
                 <select class="custom-select mb-3 form-control" name="bank">

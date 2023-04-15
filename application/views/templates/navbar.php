@@ -20,20 +20,17 @@
                     </ul>
                 </nav>
             </div>
+
             <div class="col-lg-3 text-right d-none d-md-block">
                 <nav class="navbar navbar-expand-sm bg-dark p-0">
                     <ul class="navbar-nav ml-auto mr-n2">
                     <?php if ($this->session->userdata('username')) { ?>
                         <?php foreach ($data_home_navbar as $dhn) :?>                                                                           
                             <?php $namaUser =  $this->session->userdata('username'); ?>
-                            <?php
-                            if ($namaUser ) {
-                                # code...
-                            }                                                        
-                            ?>
+                         
                             
-                                
-                            <li><a href="<?=base_url('Profile')?>"><div>Selamat Datang <?=  $namaUser?></div></a> </li>   
+                            
+                            <li><a href="<?=base_url('user/profile/index/'.$namaUser)?>"><div>Selamat Datang <?=  $namaUser?></div></a> </li>   
 
                             <?php break; ?>
                             <?php endforeach; ?>

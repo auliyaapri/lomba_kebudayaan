@@ -27,12 +27,15 @@
 						<div class="card-body px-5">
 							<h1 class="fs-4 card-title fw-bold">Pendaftaran</h1>							
 							<form action="<?=base_url('Register/index')?>" method="post" >
+							
 							<div class="mb-3">
 								<label class="mb-2 text-muted" for="email">Nama Lengkap</label>
 								<input type="text" name="nama" class="form-control" placeholder="Masukan Nama Anda">
 								<?php echo form_error('nama', '<div class="text-danger small mt-2">', '</div>'); ?>                                
-
 							</div>
+							<!-- <input type="hidden" name="id_user" class="form-control" placeholder="Masukan Nama Anda"> -->
+
+
 							<div class="mb-3">
 								<label class="mb-2 text-muted" for="email">Username</label>								
 								<input type="text" name="username" class="form-control" placeholder="Masukan username Anda">   

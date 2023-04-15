@@ -11,7 +11,7 @@ class Home extends CI_Controller
 	{
 		$keyword = $this->input->post('keyword');
 		$data['home'] = $this->model_home->data_home()->result();
-		$data_home_navbar['data_home_navbar'] = $this->model_home->data_home_navbar()->result();
+		$data_home_navbar['data_home_navbar'] = $this->model_home->data_home_navbar()->result();		
 		$datas['featured_newss'] = $this->model_home->data_featured_news()->result();
 		$berita_terbaru['berita_terbaru'] = $this->model_home->data_berita_terbaru()->result();
 		$this->load->view('templates/header');

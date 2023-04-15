@@ -4,7 +4,7 @@
             title: 'Success!',
             text: 'Login Berhasil',
             icon: 'success',
-            confirmButtonText: 'Oke'
+            confirmButtonText: 'OK'
         })
     <?php } ?>
     <?php if ($this->session->flashdata('success_tambah_data')) { ?>
@@ -12,7 +12,7 @@
             title: 'Success!',
             text: 'Konten Berhasil ditambahkan!',
             icon: 'success',
-            confirmButtonText: 'Oke'
+            confirmButtonText: 'OK'
         })
     <?php } ?>
     <?php if ($this->session->flashdata('success_beli')) { ?>
@@ -20,15 +20,16 @@
             title: 'Success!',
             text: 'Membership berhasil di beli!',
             icon: 'success',
-            confirmButtonText: 'Oke'
+            confirmButtonText: 'OK'
         })
     <?php } ?>
     <?php if ($this->session->flashdata('belum_login')) { ?>
         Swal.fire({
-            title: 'Success!',
+            
+            icon: 'error',
+            title: 'Oops...',
             text: 'Anda Belum Login',
-            icon: 'success',
-            confirmButtonText: 'Oke'
+            confirmButtonText: 'OK'
         })
     <?php } ?>
     <?php if ($this->session->flashdata('success_daftar_login')) { ?>
@@ -36,7 +37,7 @@
             title: 'Success!',
             text: 'Anda Berhasil Daftar',
             icon: 'success',
-            confirmButtonText: 'Oke'
+            confirmButtonText: 'OK'
         })
     <?php } ?>
     <?php if ($this->session->flashdata('success_tambah_keranjang')) { ?>
@@ -44,7 +45,7 @@
             title: 'Success!',
             text: 'Tambah Keranjang Berhasil',
             icon: 'success',
-            confirmButtonText: 'Oke'
+            confirmButtonText: 'OK'
         })
     <?php } ?>
 
@@ -53,7 +54,7 @@
             title: 'Success!',
             text: 'Surat Berhasil dihapus',
             icon: 'success',
-            confirmButtonText: 'Oke'
+            confirmButtonText: 'OK'
         })
     <?php } ?>
     <?php if ($this->session->flashdata('success_ubahsurat')) { ?>
@@ -61,7 +62,7 @@
             title: 'Success!',
             text: 'Surat Berhasil diubah',
             icon: 'success',
-            confirmButtonText: 'Oke'
+            confirmButtonText: 'OK'
         })
     <?php } ?>
     <?php if ($this->session->flashdata('keranjang_kosong_pembayaran')) { ?>
@@ -69,7 +70,7 @@
             title: 'Oops...!',
             text: 'Anda belum mempunyai keranjang',
             icon: 'error',
-            confirmButtonText: 'Oke'
+            confirmButtonText: 'OK'
         })
     <?php } ?>
 

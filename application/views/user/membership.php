@@ -15,13 +15,14 @@
 </head>
 
 <body>
+<?php $namaUser =  $this->session->userdata('username'); ?>
   <section>
     <div class="row">
       <h2 class="section-heading">Membership</h2>
     </div>
     <div class="row">
       
-      <a href="<?=base_url('membership/standard')?>" class="column">
+      <a href="<?=base_url('membership/standard/'.$namaUser)?>" class="column">
         <div class="card">
           <div class="icon-wrapper">
           <i class="fas fa-paper-plane"></i>
@@ -35,7 +36,7 @@
           </center>
         </div>
       </a>
-      <a href="<?=base_url('membership/basic')?>" class="column">
+      <a href="<?=base_url('membership/basic/'. $namaUser)?>" class="column">
         <div class="card">
           <div class="icon-wrapper">
           <i class="fas fa-plane"></i>
@@ -47,7 +48,7 @@
           </center>
         </div>
       </a>
-      <a href="<?=base_url('membership/pro')?>" class="column">
+      <a href="<?=base_url('membership/pro/'.$namaUser)?>" class="column">
         <div class="card">
           <div class="icon-wrapper">
             <i class="fas fa-rocket"></i>

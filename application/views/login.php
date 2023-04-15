@@ -26,10 +26,11 @@
                     <div class="card shadow-lg">
                         <center> <img class="mt-3" src="<?php echo site_url(); ?>assets_login2/logo.jpg" alt="logo" width="150"></center>
                         <div class="card-body px-5">
+                        <?php echo $this->session->flashdata('pesan'); ?>
                             <h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
                             <form action="<?= base_url('auth/login') ?>" method="post">
                                 <div class="mb-3">
-                                    <label class="mb-2 text-muted" for="email">Email</label>
+                                    <label class="mb-2 text-muted" for="email">Username</label>
                                     <input type="text" name="username" class="form-control" placeholder="Masukan Username" id="username" autofocus>
                                     <?php echo form_error('username', '<div class="text-danger small mt-2">', '</div>'); ?>
                                 </div>

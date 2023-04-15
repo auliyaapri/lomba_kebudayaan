@@ -21,11 +21,17 @@ class Register extends CI_Controller {
                 'password'  => $this->input->post('password'),
                 'role_id'   => 2,
             );
+            // $datas = array (
+            //     'id_user'      => $this->input->post('id_user'),                
+              
+            // );
             
-            $this->db->insert('tb_user', $data);
+            $this->db->insert('tb_user',$data);
+            // $this->db->insert('membership',$datas);
+            
             echo "<script>alert('okeee');</script>";
             $this->session->set_flashdata('success_daftar_login','Berhasil melakukan ');               
-           redirect('auth/login');
+            redirect('auth/login');
             
             
 
