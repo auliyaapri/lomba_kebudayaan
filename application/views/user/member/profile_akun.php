@@ -16,14 +16,11 @@
                             <label for="exampleInputEmail1">Password</label>
                             <input type="email" class="form-control" value="<?= $dpu->password; ?>" id="exampleInputEmail1" aria-describedby="emailHelp" readonly>
                         </div>
-                        
-                        
-
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Membership</label>
+                            <input type="email" class="form-control" value="Belum Ada" id="exampleInputEmail1" aria-describedby="emailHelp" readonly>
+                        </div>
                     <?php } else {; ?>
-                        
-                        
-
-
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nama Lengkap</label>
                         <input type="email" class="form-control" value="<?= $dpu->nama; ?>" id="exampleInputEmail1" aria-describedby="emailHelp" readonly>

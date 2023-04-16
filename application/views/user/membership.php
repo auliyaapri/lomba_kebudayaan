@@ -3,8 +3,9 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Services Section</title>
+  <title>SBI</title>
   <link rel="stylesheet" href="<?= base_url() ?>assets/css/membership.css" />
+  <link rel = "icon" href ="<?php echo site_url(); ?>assets_login2/logo.jpg" type = "image/x-icon">
   <!-- Font Awesome CDN-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <!-- Google Font -->

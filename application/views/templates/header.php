@@ -4,12 +4,15 @@
 <head>
     <meta charset="utf-8">
     <title>SBI</title>
+ 
+    
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel = "icon" href ="<?php echo site_url(); ?>assets_login2/logo.jpg" type = "image/x-icon">
+    
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -23,4 +26,5 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="<?= base_url()?>assets/css/style.css" rel="stylesheet">
+    
 </head>

@@ -12,7 +12,7 @@ main {
     width: 24rem;
     height: 30rem;
     margin-top:1rem;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
     cursor: pointer;
     position: relative;

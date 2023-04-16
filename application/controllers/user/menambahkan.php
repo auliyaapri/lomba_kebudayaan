@@ -4,9 +4,10 @@ class Menambahkan extends CI_Controller
 
     public function tambah_aksi()
     {
-        $this->form_validation->set_rules('judul_konten', 'judul konten ', 'required', ['required' => ' Wajib diisi!']);
+        $this->form_validation->set_rules('judul_konten', 'judul_konten ', 'required', ['required' => ' Wajib diisi!']);
         
 
+        $id_user       = $this->input->post('id_user');
         $judul_konten       = $this->input->post('judul_konten');
         $daerah             = $this->input->post('daerah');
         $kategori           = $this->input->post('kategori');
@@ -33,6 +34,8 @@ class Menambahkan extends CI_Controller
                 }
             }
             $data = array(
+
+                'id_user'      => $id_user,
                 'judul_konten'      => $judul_konten,
                 'daerah'            => $daerah,
                 'kategori'          => $kategori,
@@ -44,7 +47,7 @@ class Menambahkan extends CI_Controller
             $this->model_menambahkan_konten->tambah_barang($data, 'upload_content');
             // $this->session->set_flashdata('pesan','<script>alert("Data berhasil ditambahkan")</script>');  
             $this->session->set_flashdata('success_tambah_data','Berhasil melakukan ');              
-            redirect('welcome');
+            redirect('home');
 
         }
     }

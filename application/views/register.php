@@ -6,7 +6,7 @@
 	<meta name="author" content="Muhamad Nauval Azhar">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="description" content="This is a login page template based on Bootstrap 5">
-	<title>Login Cuyy</title>
+	<title>SBI</title>
 	<link rel = "icon" href ="<?php echo site_url(); ?>assets_login2/logo.jpg" type = "image/x-icon">
 	<link rel="stylesheet" href="<?php echo site_url(); ?>assets_login2/all.css">
 	<link rel="stylesheet" href="<?php echo site_url(); ?>assets_login2/toast/toast.min.css">
@@ -33,7 +33,7 @@
 								<input type="text" name="nama" class="form-control" placeholder="Masukan Nama Anda">
 								<?php echo form_error('nama', '<div class="text-danger small mt-2">', '</div>'); ?>                                
 							</div>
-							<!-- <input type="hidden" name="id_user" class="form-control" placeholder="Masukan Nama Anda"> -->
+							<input type="hidden" name="id_user" class="form-control" placeholder="Masukan Nama Anda">
 
 
 							<div class="mb-3">

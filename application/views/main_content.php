@@ -10,7 +10,7 @@
                      <?php $kategori_folder = $hm->kategori; ?>
 
                      <?php if ($hm->kategori2 == "slider_home") :    ?>
-                         <div class="position-relative overflow-hidden" style="height: 500px;">
+                         <div class="position-relative overflow-hidden m-1" style="height: 507px;">
                              <img src="<?= base_url() . '/upload_image/' . $daerah . '/' . strtolower($kategori_folder) . '/' . $hm->gambar ?>" class="img-fluid h-100" alt="...">
                              <div class="overlay">  
                                  <div class="mb-2">
@@ -46,10 +46,10 @@
                         $kategori_folder = $hm->kategori;
                         ?>
                      <div class="col-md-6 px-0">
-                         <div class="position-relative overflow-hidden" style="height: 250px;">
+                         <div class="position-relative overflow-hidden m-1" style="height: 250px;">
                              <img src="<?= base_url() . '/upload_image/' . $daerah . '/' . strtolower($kategori_folder) . '/' . $hm->gambar ?>" class="img-fluid w-100 h-100" style="object-fit: cover;">
                              <div class="overlay">
-                                 <div class="mb-2">
+                                 <div class="mb-2 ">
                                      <?php if ($hm->kategori == "tarian") { ?>
                                          <a class="badge badge-primary text-uppercase font-weight-semi-bold pt-1 pb-1 mr-2" href="<?=base_url('kategori/tarian')?>"><?= $hm->kategori ?><img src="<?= base_url() ?>assets/img/dance_icon.png" style="height: 23px;" class="ml-2" alt=""></a>
                                      <?php }; ?>

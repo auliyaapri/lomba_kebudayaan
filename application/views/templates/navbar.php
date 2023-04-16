@@ -28,7 +28,7 @@
                     <?php if ($this->session->userdata('username')) { ?>
                         <?php foreach ($data_home_navbar as $dhn) :?>                                                                           
                             <?php $namaUser =  $this->session->userdata('username'); ?>                         
-                            <li><a href="<?=base_url('user/profile/index/'.$namaUser)?>"><div>Selamat Datang <?=  $namaUser?></div></a> </li>   
+                            <li><a href="<?=base_url('user/profile/index/'.$namaUser)?>"><div>Selamat Datang / <i class="fas fa-user"></i> <?=  $namaUser?></div></a> </li>   
 
                             <?php break; ?>
                             <?php endforeach; ?>

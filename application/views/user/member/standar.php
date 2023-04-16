@@ -5,11 +5,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel = "icon" href ="<?php echo site_url(); ?>assets_login2/logo.jpg" type = "image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Hello, world!</title>
+    <title>SBI</title>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
 
 <?php $nama_paket = $this->uri->segment(2); ?>
     <div class="container mt-5">
-        <h1 class="text-center">Paket Membership <?php echo $nama_paket ?></h1>
+        <h1 class="text-center">Paket Membership  <span class="font-weight-bolder"><?php echo ucfirst($nama_paket) ?></span></h1>
         <form action="<?= base_url() . 'user/Tambah_membership'; ?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="exampleInputEmail1">Nama Paket Member</label>
@@ -29,8 +30,6 @@
                 
                 <?php foreach ($data_user as $ud) : ?>                    
                     <input class="form-control" type="hidden" value="<?php echo $ud->id_user ?>" name="id_user" readonly>                
-                    <input class="form-control" type="hidden"value="<?php echo $ud->role_id ?>" name="role_id" readonly>                
-                    
                     <?php endforeach ; ?>
             </div>
             <div class="form-group">
@@ -47,7 +46,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Nomor rekening</label>
-                <input class="form-control" type="text" value="19210483" name="nomor_rekening" placeholder="19210483" readonly>
+                <input class="form-control" type="text" value="BCA 19210483" name="nomor_rekening" placeholder="19210483" readonly>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Berlaku hingga</label>

@@ -13,21 +13,22 @@ class Register extends CI_Controller {
         $this->form_validation->set_rules('password2','Password','required|matches[password]');
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('register');
-        } else {
-            
+        } else {           
+             
             $data = array (
                 'nama'      => $this->input->post('nama'),
                 'username'  => $this->input->post('username'),
                 'password'  => $this->input->post('password'),
                 'role_id'   => 2,
+                     'id_user'      => $this->input->post('id_user')
             );
-            // $datas = array (
-            //     'id_user'      => $this->input->post('id_user'),                
+            $datas = array (
+                'id_user'      => $this->input->post('id_user'),                
               
-            // );
+            );
             
             $this->db->insert('tb_user',$data);
-            // $this->db->insert('membership',$datas);
+            $this->db->insert('membership',$datas);
             
             echo "<script>alert('okeee');</script>";
             $this->session->set_flashdata('success_daftar_login','Berhasil melakukan ');               

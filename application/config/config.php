@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:8080/kebudayaan';
+$config['base_url'] = 'https://e8f3-139-193-243-171.ngrok-free.app/kebudayaan/';
 
 /*
 |--------------------------------------------------------------------------

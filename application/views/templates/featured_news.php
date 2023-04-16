@@ -1,6 +1,19 @@
  <!-- Featured News Slider Start -->
- <div class="container-fluid pt-5 mb-3">
-     <div class="container">
+ 
+ <div class="container-fluid bg-white d-flex align-items-center" style="height: 350px;">
+    <div class="container">
+ 
+         
+             <h1 class="text-primary font-weight-bold">About <span class="text-secondary font-weight-bolder"> Us<span></h4>             
+             <p class="text-dark" style="line-height: 35px;"> Tentang website kebudayaan, website ini berisikan mengenai budaya-budaya di Indonesia. Mulai dari tarian tradisional, makanan khas daerah, dan alat musik tradisional. Di website ini kami hanya berfokus untuk ke tiga budaya indonesia tersebut, dan juga berfokus hanya untuk 4 daerah saja. Yaitu <b>  DKI Jakarta, Jawa Tengah, Jawa Timur, Jawa Barat.</b> Di website ini kami menyediakan paket membership untuk user jika ingin meng-upload mengenai kebudayaan Indonesia sehingga informasi yang dihasilkan dapat menjadi lebih detail dan dapat memuat kebudayaan di provinsi lebih banyak".</p>
+     </div>
+     </div>
+ <div class="container-fluid mb-3">
+
+    
+ 
+    
+     <div class="container mt-5">
          <div class="section-title">
              <h4 class="m-0 text-uppercase font-weight-bold">Berita Unggulan</h4>
          </div>

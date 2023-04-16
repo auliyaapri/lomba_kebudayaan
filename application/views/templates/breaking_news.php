@@ -5,11 +5,41 @@
             <div class="row align-items-center bg-dark">
                 <div class="col-12">
                     <div class="d-flex justify-content-between">
-                        <div class="bg-primary text-dark text-center font-weight-medium py-2" style="width: 170px;">Breaking News</div>
+                        <div class="bg-primary text-dark text-center font-weight-medium py-2" style="width: 170px;">Artikel Terbaru</div>
                         <div class="owl-carousel tranding-carousel position-relative d-inline-flex align-items-center ml-3"
                             style="width: calc(100% - 170px); padding-right: 90px;">
-                            <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div>
-                            <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div>
+                            <?php foreach ($berita_terbaru as $brt) :?>
+                            <!-- ========= START PENGKONDISIAN KATEGORI ===== -->
+                                <?php   
+                                        $folder          = $brt->kategori;
+                                        $daerah          = $brt->daerah;
+                                        $kategori_folder = $brt->kategori;
+                                ?>
+                                <?php $id_kontenn = $brt->id_konten ; ?>
+                            <!-- ========= END PENGKONDISIAN KATEGORI ===== -->
+                            <?php if ($brt->kategori == "makanan") { ?>
+
+                                <a class="text-white text-uppercase font-weight-semi-bold d-flex align-items-center" href="<?=base_url('detail/detail_konten/'.$id_kontenn)?>">
+                                    <?=$brt->judul_konten?> / <?=$brt->daerah?> 
+                                    <img src="<?= base_url() ?>assets/img/artikel_terbaru/food-icon.png" style="width: 30px;" class="ml-2" alt="">
+                             </a>
+                            <?php } ; ?>
+                            <?php if ($brt->kategori == "alat musik") { ?>
+
+                                <a class="text-white text-uppercase font-weight-semi-bold d-flex align-items-center" href="<?=base_url('detail/detail_konten/'.$id_kontenn)?>">
+                                    <?=$brt->judul_konten?> / <?=$brt->daerah?> 
+                                    <img src="<?= base_url() ?>assets/img/artikel_terbaru/alat_musik.png" style="width: 30px;" class="ml-2" alt="">
+                             </a>
+                            <?php } ; ?>
+                            <?php if ($brt->kategori == "tarian") { ?>
+
+                                <a class="text-white text-uppercase font-weight-semi-bold d-flex align-items-center" href="<?=base_url('detail/detail_konten/'.$id_kontenn)?>">
+                                    <?=$brt->judul_konten?> / <?=$brt->daerah?> 
+                                    <img src="<?= base_url() ?>assets/img/artikel_terbaru/dance_icon.png" style="width: 30px;" class="ml-2" alt="">
+                             </a>
+                            <?php } ; ?>
+                                
+                            <?php endforeach ; ?>
                         </div>
                     </div>
                 </div>

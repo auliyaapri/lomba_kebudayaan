@@ -32,18 +32,13 @@ class Auth extends CI_Controller
                 $this->session->set_userdata('username', $auth->username);
                 $this->session->set_userdata('role_id', $auth->role_id); // role_id yang tadi dibuat di table
 
-                switch ($auth->role_id) {
-                        // jadi disini role_id 1 = admin
-                        // jadi disini role_id 2 = user
+                switch ($auth->role_id) {                        
                     case 1:
                         $this->session->set_flashdata('success_login', 'Berhasil melakukan ');
-
                         redirect('admin/dashboard_admin');
                         break;
                     case 2:
                         $this->session->set_flashdata('success_login', 'Berhasil melakukan ');
-                        
-
                         redirect('home');
                         break;
                     default:
@@ -54,6 +49,7 @@ class Auth extends CI_Controller
     }
     public function register()
     {
+        
         $this->load->view('register');
 
     }

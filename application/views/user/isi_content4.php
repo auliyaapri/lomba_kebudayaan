@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+
     <?php $no = 1; ?>
     <h1> <?php echo $this->session->userdata('username'); ?></h1>
     <?php foreach ($isi_konten as $isk):?>
@@ -17,7 +18,8 @@
         <?php endforeach ; ?>
         
     
-</body><!doctype html>
+</body>
+<!doctype html>
 <html lang="en">
 
 <head>
