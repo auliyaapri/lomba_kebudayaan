@@ -58,7 +58,7 @@
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
             <a href="index.html" class="navbar-brand d-block d-lg-none">
-                <h1 class="m-0 display-4 text-uppercase text-primary">Bizs<span class="text-white font-weight-normal">News</span></h1>
+                <h1 class="m-0 display-4 text-uppercase text-primary">SB<span class="text-white font-weight-normal">INDONESIA</span></h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -76,7 +76,8 @@
                                     <!-- Jika blm login maka akan ada perintah suruh login -->
                                     <li><a href="<?=base_url('auth/login')?>" class="nav-item nav-link">Login</a></li>
                                 <?php }; ?>                                          
-                    <a href="<?=base_url('auth/register');?>" class="nav-item nav-link">DAFTAR</a>              
+                    <a href="<?=base_url('auth/register');?>" class="nav-item nav-link">DAFTAR</a>      
+                    <a class="nav-item nav-link"class="nav-item nav-link" href="<?=base_url('membership')?>">Beli Membership</a>                                    
                 </div>
 
 

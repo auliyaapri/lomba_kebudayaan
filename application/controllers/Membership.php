@@ -22,7 +22,6 @@ class Membership extends CI_Controller {
 			redirect('auth/login');
         }
 		$id_user = $this->uri->segment(3);
-		
 		$data_user['data_user'] = $this->model_home->data_user($id_user)->result();			        
 		$this->load->view('user/member/standar',$data_user);
 		$this->load->view('templates/footer');
@@ -33,7 +32,6 @@ class Membership extends CI_Controller {
 		$id_user = $this->uri->segment(3);
 		
 		$data_user['data_user'] = $this->model_home->data_user($id_user)->result();	
-
 		     if ($this->session->userdata('role_id') != '2') {
             $this->session->set_flashdata('belum_login', 'Berhasil melakukan ');
             redirect('auth/login');

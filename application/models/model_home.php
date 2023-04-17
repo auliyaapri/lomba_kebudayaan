@@ -7,7 +7,16 @@ class Model_home extends CI_Model
     public function data_home()
     {
         // return $this->db->get('upload_content');
+        // $this->db->order_by("tgl_konten", "asc");
         $result = $this->db->get('upload_content', 4, 0);
+        return $result;
+    }
+    public function data_home2()
+    {
+        // return $this->db->get('upload_content');
+        $this->db->where('kategori2', "slider_home");
+        
+        $result = $this->db->get('upload_content');
         return $result;
     }
     public function data_home_navbar()
@@ -102,7 +111,7 @@ class Model_home extends CI_Model
     }
     public function data_berita_terbaru()
     {
-        $this->db->order_by("tgl_konten", "asc");
+        $this->db->order_by("tgl_konten", "desc");
         $result = $this->db->get('upload_content', 4, 0);
 
         // return $this->db->get('tb_barang', $limit, $start);

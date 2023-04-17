@@ -75,7 +75,7 @@
 
                     <?php } else {; ?>
                         <form action="<?= base_url() . 'user/menambahkan/tambah_aksi'; ?>" method="post" enctype="multipart/form-data">
-                            <h1 class="mt-5">Masukan SKonsen</h1>
+                            <h1 class="mt-5">Masukan Konten</h1>
                                               
                             <?php foreach ($isi_konten as $dpu) : ?>
                                 <input type="hidden" value="<?=$dpu->id_user?>" name="id_user" class="form-control">

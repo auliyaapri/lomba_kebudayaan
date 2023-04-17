@@ -1,5 +1,5 @@
    <!-- News With Sidebar Start -->
-   <div class="container-fluid">
+   <div class="container-fluid mt-2">
        <div class="container">
            <div class="row">
                <div class="col-lg-8">
@@ -53,7 +53,7 @@
                        <div class="section-title mb-0">
                            <h4 class="m-0 text-uppercase font-weight-bold">Berita Trending</h4>
                        </div>
-                       <div class="bg-white border border-top-0 p-3">
+                       <div class="bg-white border border-top-0 p-3 mt-3">
                        <?php foreach ($berita_terbaru as $brt) : ?>
                         <?php
                     $folder          = $brt->kategori;
@@ -88,7 +88,7 @@
                    <!-- Popular News End -->
 
                    <!-- Tags Start -->
-                   <div class="mb-3">
+                   <div class="mb-3 mt-3">
                        <div class="section-title mb-0">
                            <h4 class="m-0 text-uppercase font-weight-bold">Tags</h4>
                        </div>

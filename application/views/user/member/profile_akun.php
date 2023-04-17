@@ -1,6 +1,7 @@
 <div class="container-fluid">
     <div class="row align-items-center bg-white py-3 px-lg-5">
         <div class="col-lg-12">
+        
             <form class="ml-3">
                 <?php foreach ($data_profile_user as $dpu) : ?>
                     <?php if ($dpu->nama_paket === "") { ?>
@@ -55,7 +56,9 @@
                         <?php endif; ?>
                     </div>
                     <?php } ; ?>
+                    
                 <?php endforeach; ?>
+                
                 <a href="<?= base_url('home') ?>" class="btn btn-danger"><i class="fa fa-chevron-circle-left"></i> Kembali</a>
             </form>
         </div>

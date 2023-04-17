@@ -6614,7 +6614,9 @@ button.bg-dark:focus {
 }
 
 .justify-content-between {
-  justify-content: space-between !important;
+  justify-content: flex-start !important;
+  /* background-color: red; */
+  
 }
 
 .justify-content-around {

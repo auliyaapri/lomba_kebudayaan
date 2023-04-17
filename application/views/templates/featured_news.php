@@ -1,6 +1,6 @@
  <!-- Featured News Slider Start -->
  
- <div class="container-fluid bg-white d-flex align-items-center" style="height: 350px;">
+ <div class="container-fluid bg-white d-flex align-items-center">
     <div class="container">
  
          
@@ -13,11 +13,11 @@
     
  
     
-     <div class="container mt-5">
+     <div class="container mt-5 mb-4">
          <div class="section-title">
              <h4 class="m-0 text-uppercase font-weight-bold">Berita Unggulan</h4>
          </div>
-         <div class="owl-carousel news-carousel carousel-item-4 position-relative">
+         <div class="owl-carousel news-carousel carousel-item-4 position-relative mt-4">
              <?php foreach ($featured_newss as $ftr) : ?>
                  <?php
                     $folder          = $ftr->kategori;
