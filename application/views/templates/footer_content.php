@@ -22,7 +22,7 @@
                     <?php foreach ($home as $brt) :?>
                     <div class="mb-2">
                     <?php if ($brt->kategori == "tarian") { ?>
-                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2 w-25" href="<?=base_url('kategori/tarian')?>"><?= $brt->kategori ?> <img src="<?= base_url() ?>assets/img/dance_icon.png" style="height: 23px;" class="ml-2" alt=""></a>
+                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 " href="<?=base_url('kategori/tarian')?>"><?= $brt->kategori ?> <img src="<?= base_url() ?>assets/img/dance_icon.png" style="height: 23px;" class="ml-2" alt=""></a>
                         <?php }; ?>
                     <?php if ($brt->kategori == "makanan") { ?>
                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2 w-25" href="<?=base_url('kategori/makanan')?>"><?= $brt->kategori ?> <img src="<?= base_url() ?>assets/img/food-icon.png" style="height: 23px;" class="ml-2" alt=""></a>
