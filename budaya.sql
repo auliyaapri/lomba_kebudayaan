@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2023 at 05:33 PM
+-- Generation Time: Apr 19, 2023 at 03:20 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -55,7 +55,8 @@ INSERT INTO `membership` (`id_user`, `nama_paket`, `nama_pembeli`, `keterangan`,
 (10, '', '', '', '', '', '', '', '2023-04-16 20:02:40'),
 (11, 'pro', 'Bayu', 'Pada paket ini pengguna bisa menambahkan artikel dalam batas waktu hanya berlaku 2 minggu saja. ', 'Rp. 20.000', 'BCA 19210483', 'dana', 'Screenshot_2023-04-13_232748.png', '2023-04-16 20:02:41'),
 (17, 'pro', 'april123', 'Pada paket ini pengguna bisa menambahkan artikel dalam batas waktu hanya berlaku 2 minggu saja. ', 'Rp. 20.000', 'BCA 19210483', 'ovo', 'fc5061ec4be5621f530267ae4fa7b4411.jpg', '2023-04-16 22:26:18'),
-(18, 'basic', 'resaaa07', 'Pada paket ini pengguna bisa menambahkan artikel dalam batas waktu hanya berlaku 7 hari saja.', 'Rp. 15.000', 'BCA 19210483', 'ovo', 'bt21_chimi.jpg', '2023-04-17 08:51:02');
+(18, 'basic', 'resaaa07', 'Pada paket ini pengguna bisa menambahkan artikel dalam batas waktu hanya berlaku 7 hari saja.', 'Rp. 15.000', 'BCA 19210483', 'ovo', 'bt21_chimi.jpg', '2023-04-17 08:51:02'),
+(20, 'standard', 'timsbi123', 'Pada paket ini pengguna bisa menambahkan artikel dalam batas waktu hanya berlaku 3 hari saja.', 'Rp. 10.000', 'BCA 19210483', 'ovo', 'Frame_11.jpg', '2023-04-18 22:50:42');
 
 -- --------------------------------------------------------
 
@@ -87,7 +88,8 @@ INSERT INTO `tb_user` (`id_user`, `nama`, `username`, `password`, `role_id`) VAL
 (10, 'Muhammad bayu', 'Bayu', '123', 2),
 (11, 'Muhammad bayu', 'Bayu', '123', 2),
 (17, 'Apriliani Hidayati', 'april123', 'bsi', 2),
-(18, 'Resa Zultia', 'resaaa07', '123456', 2);
+(18, 'Resa Zultia', 'resaaa07', '123456', 2),
+(20, 'tim sbi', 'timsbi123', '123', 2);
 
 -- --------------------------------------------------------
 
@@ -151,7 +153,8 @@ INSERT INTO `upload_content` (`id_konten`, `id_user`, `nama_penulis`, `judul_kon
 (51, 18, 'resaaa07', 'Lotek', 'jawa barat', 'makanan', '', 'Lotek adalah salah satu makanan tradisional yang telah ada sejak dulu kala. Lotek ini berisikan sayuran yang dibumbui oleh bumbu kacang, disajikan dengan lontong atau nasi hangat, serta dengan kerupuk dan bawang goreng.', 'lotek.jpg', '2023-04-17 09:47:13'),
 (52, 18, 'resaaa07', 'Seblak', 'jawa barat', 'makanan', '', 'Seblak adalah makanan Indonesia yang dikenal berasal dari Bandung, Jawa Barat dengan cita rasa gurih dan pedas. Terbuat dari kerupuk basah yang dimasak dengan sayuran dan sumber protein seperti telur, ayam, boga bahari, atau olahan daging sapi, dan dimasak dengan kencur.', 'seblak.jpg', '2023-04-17 09:53:25'),
 (53, 18, 'resaaa07', 'Karedok', 'jawa barat', 'makanan', '', 'Karedook adalah salah satu makanan khas Sunda, dibuat dengan bahan-bahan sayuran mentah antara lain: mentimun, tauge, kembang kol, kacang panjang, daun kemangi, dan terong.', 'karedok.jpg', '2023-04-17 09:55:13'),
-(54, 18, 'resaaa07', 'Asinan Bogor', 'jawa barat', 'makanan', '', 'Asinan adalah suatu makanan yang dibuat melalui fermentasi anaerob atau dengan cara merendamnya ke dalam cuka. Fermentasi dalam air asin dapat menghasilkan makanan, sehingga disebut dengan asinan. Bahkan, prosedur fermentasi tersebut menghasilkan perubahan tekstur makanan dan rasanya juga.', 'asinan_bogor.jpg', '2023-04-17 09:58:03');
+(54, 18, 'resaaa07', 'Asinan Bogor', 'jawa barat', 'makanan', '', 'Asinan adalah suatu makanan yang dibuat melalui fermentasi anaerob atau dengan cara merendamnya ke dalam cuka. Fermentasi dalam air asin dapat menghasilkan makanan, sehingga disebut dengan asinan. Bahkan, prosedur fermentasi tersebut menghasilkan perubahan tekstur makanan dan rasanya juga.', 'asinan_bogor.jpg', '2023-04-17 09:58:03'),
+(56, 20, 'timsbi123', 'Kue Cucur', 'jakarta', 'makanan', '', 'Kue Cucur atau Cucur (Aksara Sunda: ᮎᮥᮎᮥᮁ atau ᮎᮥᮂᮎᮥᮁ) atau juga Cuhcur merupakan jajanan khas suku Betawi yang berasal dari wilayah barat pulau Jawa (kini merupakan bagian dari provinsi Jakarta, provinsi Banten, dan provinsi Jawa Barat). Kue ini terbuat dari tepung beras dan gula jawa atau gula aren yang digoreng.', 'kue-cucur1.jpg', '2023-04-18 22:52:12');
 
 --
 -- Indexes for dumped tables
@@ -183,19 +186,19 @@ ALTER TABLE `upload_content`
 -- AUTO_INCREMENT for table `membership`
 --
 ALTER TABLE `membership`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `upload_content`
 --
 ALTER TABLE `upload_content`
-  MODIFY `id_konten` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id_konten` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

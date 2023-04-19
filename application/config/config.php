@@ -24,7 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost:8080/kebudayaan/';
-// $config['base_url'] = 'https://d8e0-139-193-243-171.ngrok-free.app/kebudayaan/';
+// $config['base_url'] = 'https://7f04-139-193-243-171.ngrok-free.app/kebudayaan/';
+// $config['base_url'] = 'https://383f-139-193-243-171.ngrok-free.app/kebudayaan';
 
 
 /*

@@ -20,7 +20,7 @@
 
   <div class = "card" >
   
-  <img src="<?= base_url() . '/assets/img/kategori_alat_musik.png' ?>"alt="...">
+  <img src="<?= base_url() . '/assets/img/kategori_alat_musik.jpg' ?>"alt="...">
     <div class="card-content">
       <h2>
         Alat Musik
@@ -40,7 +40,7 @@
   
   <div class = "card">
     
-    <img src="<?= base_url() . '/assets/img/kategori_makanan.png' ?>"alt="...">
+    <img src="<?= base_url() . '/assets/img/kategori_makanan.jpg' ?>"alt="...">
     <div class="card-content">
       <h2>
         Makanan
@@ -57,7 +57,7 @@
     </div>
   </div>
   <div class = "card">
-  <img src="<?= base_url() . '/assets/img/kategori_menari1.png' ?>"alt="...">
+  <img src="<?= base_url() . '/assets/img/kategori_menari1.jpg' ?>"alt="...">
     <div class="card-content">
       <h2>
         Tarian
