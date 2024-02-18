@@ -1,4 +1,5 @@
 # Projek Lomba Website Kebudayaan 2023✨
+![WhatsApp-Image-2023-02-09-at-11 32 20-750x430](https://github.com/auliyaapri/lomba_kebudayaan/assets/45688720/1e745fde-47fb-4e1e-9a36-788a1359d653)
 
 Di projek ini kami membuat website dengan tema kebudayaan untuk mengikuti perlombaan https://pikmi.id/, dengan menggunakan Codeigniter 3. 
 
