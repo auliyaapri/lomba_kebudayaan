@@ -30,12 +30,7 @@ class Home extends CI_Controller
 			$datass['home'] = $this->model_home->data_home()->result();
 		
 			$this->load->view('main_content', $datass);
-		}
-		// if ($keyword == null) {
-		// 	$datass['home'] = $this->model_home->data_home2()->result();
-		// 	$this->load->view('main_content', $datass);
-		// }
-
+		}		
 		$this->load->view('templates/breaking_news',$berita_terbaru);
 		$this->load->view('templates/featured_news', $datas);
 		$this->load->view('templates/news_sidebar',$berita_terbaru);

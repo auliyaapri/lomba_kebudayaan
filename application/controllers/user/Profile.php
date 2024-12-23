@@ -7,6 +7,7 @@ class Profile extends CI_Controller {
         $this->load->view('templates/header');
         $this->load->view('templates/navbar',$data_home_navbar);
         $this->load->view('user/member/profile_akun',$data_profile_user);
+        
 
     }
     

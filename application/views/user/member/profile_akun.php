@@ -41,7 +41,6 @@
                     <div class="form-group">
                         <label for="exampleInputEmail1">Berlaku hingga</label>
                         <?php $paket = $dpu->nama_paket ?>
-
                         <?php if ($paket === "basic") : ?>
                             <?php $tgl_membership = date("F-d-Y", strtotime('+7 days', strtotime($dpu->tgl_membership))); ?>
                             <input class="form-control" type="text" value="<?= $tgl_membership ?>" placeholder="19210483" readonly>

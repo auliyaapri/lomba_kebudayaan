@@ -94,11 +94,6 @@
                 
                 <?php echo form_close(); ?>
                 <?php } ; ?>
-
-
-
-
-
                 <?php if ($this->uri->segment(2) == 'alat_musik') {?>
                 <?php echo form_open('kategori/alat_musik'); ?>
                 <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
