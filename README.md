@@ -19,16 +19,20 @@ Seputar Budaya Indonesia adalah sebuah website yang dirancang untuk menyajikan i
 ## 🖼️ Tampilan Fitur Utama
 
 ### Beranda
-![Screenshot Beranda](https://github.com/user-attachments/assets/beranda-sbi.png)
+![image](https://github.com/user-attachments/assets/5fd94a01-90d3-4df3-8a5d-f45ba2f48c0b)
+
 
 ### Login
-![Screenshot Login](https://github.com/user-attachments/assets/login-sbi.png)
+![image](https://github.com/user-attachments/assets/21a33202-e107-4214-aee2-2de628cbb4b7)
+
 
 ### Register
-![Screenshot Register](https://github.com/user-attachments/assets/register-sbi.png)
+![image](https://github.com/user-attachments/assets/a1f1858c-9f64-47b9-9488-6ef8866e6772)
+
 
 ### Tambah Artikel
-![Screenshot Tambah Artikel](https://github.com/user-attachments/assets/tambah-artikel-sbi.png)
+![image](https://github.com/user-attachments/assets/42bbf817-3012-458b-8bda-704ac6bdd061)
+
 
 
 [![Tonton di YouTube](https://img.shields.io/badge/Tonton%20di%20YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=zfqBxEmlhbI&t=5s)
