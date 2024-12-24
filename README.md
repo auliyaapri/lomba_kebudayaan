@@ -30,6 +30,9 @@ Seputar Budaya Indonesia adalah sebuah website yang dirancang untuk menyajikan i
 ### Tambah Artikel
 ![Screenshot Tambah Artikel](https://github.com/user-attachments/assets/tambah-artikel-sbi.png)
 
+
+[![Tonton di YouTube](https://img.shields.io/badge/Tonton%20di%20YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=zfqBxEmlhbI&t=5s)
+
 ## 🚀 Tech Stack Used
 - **HTML, CSS, dan JavaScript**
 - **Bootstrap**
