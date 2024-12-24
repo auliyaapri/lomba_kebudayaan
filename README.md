@@ -1,5 +1,7 @@
 # Projek Lomba Kebudayaan Nasional 2023 - PIKMI UBSI ✨
 
+![WhatsApp-Image-2023-02-09-at-11 32 20-750x430](https://github.com/user-attachments/assets/6b897252-25d3-4035-9e85-b4090a67142b)
+
 Pada lomba ini, kami diberikan tantangan untuk mengembangkan sebuah situs web menggunakan framework PHP, yaitu CodeIgniter 3. Proyek ini diberi nama **Seputar Budaya Indonesia (SBI)**, yang bertujuan untuk melestarikan budaya Indonesia melalui platform digital.
 
 Seputar Budaya Indonesia adalah sebuah website yang dirancang untuk menyajikan informasi tentang budaya Indonesia, seperti makanan khas, alat musik tradisional, dan tarian dari berbagai daerah di Indonesia. Fokus utama pengembangan kami adalah menyediakan konten edukatif yang ramah pengguna dan dapat diakses oleh semua kalangan.
